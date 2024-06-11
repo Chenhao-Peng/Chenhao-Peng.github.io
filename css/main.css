@@ -848,6 +848,11 @@ pre code {
 .post-body .note.danger h6 {
   color: #d9534f;
 }
+.pdfobject-container iframe,
+.pdfobject-container embed {
+  height: 800px;
+  width: 100%;
+}
 .post-body .tabs {
   margin-bottom: 20px;
 }
@@ -1233,7 +1238,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #05ffc9;
+  background: #ff3cff;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
