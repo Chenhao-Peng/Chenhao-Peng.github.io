@@ -256,7 +256,7 @@
         
         <li><div class="divider"></div></li>
         <li>
-            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+            <a href="https://github.com/Chenhao-Peng" class="waves-effect waves-light" target="_blank">
                 <i class="fab fa-github-square fa-fw"></i>Fork Me
             </a>
         </li>
@@ -313,7 +313,7 @@
     }
 </style>
 
-<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+<a href="https://github.com/Chenhao-Peng" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
    data-tooltip="Fork Me" data-position="left" data-delay="50">
     <svg viewBox="0 0 250 250" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
@@ -394,10 +394,28 @@
             <div class="tag-chips">
                 
                 
+                <a href="/tags/%E8%AE%A1%E7%AE%97%E7%89%A9%E7%90%86/" title="计算物理: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="计算物理" style="background-color: #F9EBEA;">计算物理
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/matlab/" title="matlab: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="matlab" style="background-color: #F5EEF8;">matlab
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
                 <a href="/tags/QFT/" title="QFT: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-active "
-                            data-tagname="QFT" style="background-color: #F9EBEA;">QFT
+                            data-tagname="QFT" style="background-color: #D5F5E3;">QFT
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -406,7 +424,7 @@
                 <a href="/tags/%E9%87%8F%E5%AD%90%E5%9C%BA%E8%AE%BA/" title="量子场论: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="量子场论" style="background-color: #F5EEF8;">量子场论
+                            data-tagname="量子场论" style="background-color: #E8F8F5;">量子场论
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -415,7 +433,7 @@
                 <a href="/tags/%E6%B3%9B%E5%87%BD/" title="泛函: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="泛函" style="background-color: #D5F5E3;">泛函
+                            data-tagname="泛函" style="background-color: #FEF9E7;">泛函
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -424,7 +442,7 @@
                 <a href="/tags/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6/" title="量子力学: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="量子力学" style="background-color: #E8F8F5;">量子力学
+                            data-tagname="量子力学" style="background-color: #F8F9F9;">量子力学
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -460,7 +478,11 @@
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="post-category">
+                                <a href="/categories/%E9%87%8F%E5%AD%90%E5%9C%BA%E8%AE%BA/" class="post-category">
+                                量子场论
+                                </a>
+                                
+                                <a href="/categories/%E9%87%8F%E5%AD%90%E5%9C%BA%E8%AE%BA/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="post-category">
                                 读书笔记
                                 </a>
                                 
@@ -766,14 +788,6 @@ $(function () {
     
 
     <!-- 鼠标星星特效 -->
-     
-        <script type="text/javascript">
-            // 只在桌面版网页启用特效
-            var windowWidth = $(window).width();
-            if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/libs/others/star.js"><\/script>');
-            }
-        </script>
     
 
      
@@ -801,6 +815,8 @@ $(function () {
 </script>
 
     
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
     
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
     
@@ -820,6 +836,22 @@ $(function () {
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="//cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 </body>
 
