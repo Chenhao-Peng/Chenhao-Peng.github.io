@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.2.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"chenhao-peng.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="是上计算物理课程时候记得笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算物理课程笔记">
+<meta property="og:url" content="http://chenhao-peng.github.io/2024/06/11/ji-suan-wu-li-ke-cheng-bi-ji/index.html">
+<meta property="og:site_name" content="Chenhao Peng&#39;s nest">
+<meta property="og:description" content="是上计算物理课程时候记得笔记">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-06-11T07:14:42.000Z">
+<meta property="article:modified_time" content="2024-06-17T12:58:38.947Z">
+<meta property="article:author" content="Chenhao Peng">
+<meta property="article:tag" content="计算物理">
+<meta property="article:tag" content="matlab">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://chenhao-peng.github.io/2024/06/11/ji-suan-wu-li-ke-cheng-bi-ji/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://chenhao-peng.github.io/2024/06/11/ji-suan-wu-li-ke-cheng-bi-ji/","path":"2024/06/11/ji-suan-wu-li-ke-cheng-bi-ji/","title":"计算物理课程笔记"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>计算物理课程笔记 | Chenhao Peng's nest</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Chenhao Peng's nest</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Have a nice day ^-^</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0%E5%9F%BA%E6%9C%AC%E6%95%B0%E5%80%BC%E8%BF%90%E7%AE%97"><span class="nav-number">1.</span> <span class="nav-text">第一章基本数值运算</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BE%AE%E5%88%86"><span class="nav-number">1.1.</span> <span class="nav-text">微分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A7%AF%E5%88%86"><span class="nav-number">1.2.</span> <span class="nav-text">积分</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#langrange%E6%8F%92%E5%80%BC%E6%B3%95"><span class="nav-number">1.2.1.</span> <span class="nav-text">langrange插值法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%B8%89%E7%A7%8D%E6%8F%92%E5%80%BC%E7%A7%AF%E5%88%86%E6%96%B9%E5%BC%8F"><span class="nav-number">1.2.2.</span> <span class="nav-text">三种插值积分方式</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%BB%E6%89%BE%E5%87%BD%E6%95%B0%E7%9A%84%E6%A0%B9"><span class="nav-number">1.3.</span> <span class="nav-text">寻找函数的根</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BA%8C%E5%88%86%E6%B3%95"><span class="nav-number">1.3.1.</span> <span class="nav-text">二分法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#newton-raphson%E6%96%B9%E6%B3%95"><span class="nav-number">1.3.2.</span> <span class="nav-text">newton-Raphson方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%BC%A6%E5%89%B2%E6%B3%95"><span class="nav-number">1.3.3.</span> <span class="nav-text">弦割法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%96%B9%E7%A8%8B%E5%A4%9A%E6%A0%B9"><span class="nav-number">1.3.4.</span> <span class="nav-text">方程多根</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#matlab%E7%A8%8B%E5%BA%8F"><span class="nav-number">1.3.5.</span> <span class="nav-text">Matlab程序</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E6%B1%82%E8%A7%A3"><span class="nav-number">1.4.</span> <span class="nav-text">微分方程求解</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%88%9D%E5%80%BC%E9%97%AE%E9%A2%98"><span class="nav-number">1.4.1.</span> <span class="nav-text">初值问题</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#euler-%E6%B3%95"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">Euler 法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#taylor-%E7%BA%A7%E6%95%B0%E6%B3%95"><span class="nav-number">1.4.1.2.</span> <span class="nav-text">Taylor 级数法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#adams-bashforth-%E4%BA%8C%E6%AD%A5%E6%B3%95"><span class="nav-number">1.4.1.3.</span> <span class="nav-text">Adams-Bashforth 二步法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#ab%E5%9B%9B%E6%AD%A5%E6%B3%95"><span class="nav-number">1.4.1.4.</span> <span class="nav-text">AB四步法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E9%9A%90%E5%BC%8F%E6%B3%95"><span class="nav-number">1.4.1.5.</span> <span class="nav-text">隐式法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%AF%B9%E9%9A%90%E5%BC%8F%E6%B3%95ab%E6%B3%95euler%E6%B3%95%E7%9A%84%E4%B8%80%E7%82%B9%E7%82%B9%E8%AE%A8%E8%AE%BA"><span class="nav-number">1.4.1.6.</span> <span class="nav-text">对隐式法,AB法,Euler法的一点点讨论</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%94%B9%E8%BF%9Beuler%E6%96%B9%E6%B3%95-%E6%A2%AF%E5%BD%A2%E5%85%AC%E5%BC%8F"><span class="nav-number">1.4.1.7.</span> <span class="nav-text">改进Euler方法-梯形公式</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#rung-kutta%E7%AE%97%E6%B3%95"><span class="nav-number">1.4.1.8.</span> <span class="nav-text">Rung-kutta算法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E7%A8%B3%E5%AE%9A%E6%80%A7%E9%97%AE%E9%A2%98"><span class="nav-number">1.4.1.9.</span> <span class="nav-text">稳定性问题</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%9A%84%E8%BE%B9%E5%80%BC%E9%97%AE%E9%A2%98%E4%B8%8E%E6%9C%AC%E5%BE%81%E5%80%BC%E9%97%AE%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">第三章-常微分方程的边值问题与本征值问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BE%B9%E5%80%BC%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3"><span class="nav-number">2.1.</span> <span class="nav-text">边值问题的解</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E8%BE%B9%E5%80%BC%E9%97%AE%E9%A2%98%E7%9A%84%E8%BF%AD%E5%8A%A0%E6%B3%95"><span class="nav-number">2.1.1.</span> <span class="nav-text">线性边值问题的迭加法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%9D%9E%E7%BA%BF%E6%80%A7%E8%BE%B9%E5%80%BC%E9%97%AE%E9%A2%98%E7%9A%84%E6%89%93%E9%9D%B6%E6%B3%95"><span class="nav-number">2.1.2.</span> <span class="nav-text">非线性边值问题的打靶法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%9A%84%E5%B7%AE%E5%88%86%E6%96%B9%E6%B3%95"><span class="nav-number">2.1.3.</span> <span class="nav-text">线性常微分方程的差分方法</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%AC%E5%BE%81%E5%80%BC%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3"><span class="nav-number">2.2.</span> <span class="nav-text">本征值问题的解:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E5%81%8F%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%9A%84%E6%95%B0%E5%80%BC%E6%B1%82%E8%A7%A3"><span class="nav-number">3.</span> <span class="nav-text">第四章 偏微分方程的数值求解</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%81%8F%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-number">3.1.</span> <span class="nav-text">偏微分方程的分类</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%B9%B3%E5%9D%87%E9%9A%90%E5%BC%8F%E5%B7%AE%E5%88%86%E6%B3%95crank-nicolson"><span class="nav-number">3.1.1.</span> <span class="nav-text">平均隐式差分法Crank-Nicolson</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%AE%97%E7%AC%A6%E8%A1%A8%E7%A4%BA%E7%9A%84%E5%B9%B3%E5%9D%87%E9%9A%90%E5%BC%8F%E5%B7%AE%E5%88%86%E6%B3%95crank-nicolson%E6%96%B9%E6%B3%95%E6%B1%82%E8%A7%A3schrodinger%E6%96%B9%E7%A8%8B"><span class="nav-number">3.1.2.</span> <span class="nav-text">算符表示的平均隐式差分法(Crank-Nicolson)方法求解schrodinger方程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%96%B9%E6%B3%95"><span class="nav-number">4.</span> <span class="nav-text">蒙特卡洛方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%96%B9%E6%B3%95%E7%AE%97%E7%A7%AF%E5%88%86-%E9%87%8D%E8%A6%81%E6%8A%BD%E6%A0%B7%E6%B3%95"><span class="nav-number">4.1.</span> <span class="nav-text">蒙特卡洛方法算积分,
+重要抽样法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%87%8D%E8%A6%81%E6%8A%BD%E6%A0%B7%E6%B3%95%E7%9A%84%E6%95%B0%E5%80%BC%E6%96%B9%E6%B3%951%E5%B7%AE%E5%88%86%E6%96%B9%E6%B3%95"><span class="nav-number">4.2.</span> <span class="nav-text">重要抽样法的数值方法1,差分方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%96%B9%E6%B3%95%E7%9A%84%E6%95%B0%E5%80%BC%E6%96%B9%E6%B3%952-von_neumann-%E8%88%8D%E9%80%89%E6%B3%95"><span class="nav-number">4.3.</span> <span class="nav-text">蒙特卡洛方法的数值方法2,
+Von_Neumann 舍选法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%87%8D%E8%A6%81%E6%8A%BD%E6%A0%B7%E6%B3%95%E8%AE%A1%E7%AE%97%E5%A4%9A%E7%BB%B4%E7%A7%AF%E5%88%86-metropolis%E6%96%B9%E6%B3%95"><span class="nav-number">4.4.</span> <span class="nav-text">重要抽样法计算多维积分,
+metropolis方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%96%B9%E6%B3%95%E8%AE%A1%E7%AE%97ising-%E6%A8%A1%E5%9E%8B"><span class="nav-number">4.5.</span> <span class="nav-text">蒙特卡洛方法计算Ising 模型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B8%E5%9E%8B%E7%9A%84%E4%BE%8B%E5%AD%90"><span class="nav-number">5.</span> <span class="nav-text">典型的例子</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#rk%E7%AE%97%E6%B3%95"><span class="nav-number">5.1.</span> <span class="nav-text">4-RK算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#simpson38%E7%A7%AF%E5%88%86%E6%B3%95"><span class="nav-number">5.2.</span> <span class="nav-text">Simpson38积分法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2%E5%8F%91%E7%BB%93%E5%90%88%E4%BA%8C%E5%88%86%E6%B3%95"><span class="nav-number">5.3.</span> <span class="nav-text">简单搜索发结合二分法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%96%9B%E5%AE%9A%E8%B0%94%E6%96%B9%E7%A8%8B%E7%9A%84%E6%9C%AC%E5%BE%81%E5%80%BC%E9%97%AE%E9%A2%98"><span class="nav-number">5.4.</span> <span class="nav-text">薛定谔方程的本征值问题</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Chenhao Peng"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Chenhao Peng</p>
+  <div class="site-description" itemprop="description">High-Energy phenomenology phd candidate</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Chenhao-Peng" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Chenhao-Peng" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:chenhaopeng712100@gmail.com" title="E-Mail → mailto:chenhaopeng712100@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://chenhao-peng.github.io/2024/06/11/ji-suan-wu-li-ke-cheng-bi-ji/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Chenhao Peng">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chenhao Peng's nest">
+      <meta itemprop="description" content="High-Energy phenomenology phd candidate">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="计算物理课程笔记 | Chenhao Peng's nest">
+      <meta itemprop="description" content="是上计算物理课程时候记得笔记">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          计算物理课程笔记
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-06-11 15:14:42" itemprop="dateCreated datePublished" datetime="2024-06-11T15:14:42+08:00">2024-06-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-06-17 20:58:38" itemprop="dateModified" datetime="2024-06-17T20:58:38+08:00">2024-06-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%89%A9%E7%90%86%E4%B8%AD%E7%9A%84%E6%95%B0%E5%AD%A6%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">物理中的数学技巧</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%89%A9%E7%90%86%E4%B8%AD%E7%9A%84%E6%95%B0%E5%AD%A6%E6%8A%80%E5%B7%A7/%E8%AE%A1%E7%AE%97%E7%89%A9%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">计算物理</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+            <div class="post-description">是上计算物理课程时候记得笔记</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h3 id="第一章基本数值运算">第一章基本数值运算</h3>
+<h4 id="微分">微分</h4>
+<ul>
+<li><p>向前 <span class="math display">\[
+\begin{aligned}
+&amp;f(x_0+h)=f(x_0)+hf&#39;(x_0)+\frac{h^2}{2}f&#39;&#39;(\xi)\\
+  &amp;\frac{f(x_0+h)-f(x_0)}{h}=f&#39;(x_0)+\frac{h}{2}f&#39;&#39;(\xi)\\
+  &amp;R=-\frac{h}{2}f&#39;&#39;(\xi)
+\end{aligned}
+\]</span></p></li>
+<li><p>向后 <span class="math display">\[
+\begin{aligned}
+&amp;f(x_0-h)=f(x_0)-hf&#39;(x_0)+\frac{h^2}{2}f&#39;&#39;(\xi)\\
+&amp;\frac{f(x_0)-f(x_0-h)}{h}=f&#39;(x_0)-\frac{h}{2}f&#39;&#39;(\xi)\\
+&amp;R=\frac{h}{2}f&#39;&#39;(\xi)
+\end{aligned}
+\]</span></p></li>
+<li><p>中心差分 <span class="math display">\[
+\begin{aligned}
+&amp;f(x_0+h)=f(x_0)+hf&#39;(x_0)+\frac{h^2}{2}f&#39;&#39;(x)+\frac{h^3}{3!}f&#39;&#39;&#39;(\xi_{+})\\
+  &amp;f(x_0-h)=f(x_0)-hf&#39;(x_0)+\frac{h^2}{2}f&#39;&#39;(x)-\frac{h^3}{3!}f&#39;&#39;&#39;(\xi_{-})\\
+  &amp;\frac{f(x_0+h)-f(x_0-h)}{2h}=f&#39;(x_0)+\frac{h^2}{12}(f&#39;&#39;&#39;(\xi_{+})+f&#39;&#39;&#39;(\xi_{-}))\\
+  &amp;R
+=-\frac{h^2}{12}(f&#39;&#39;&#39;(\xi_{+})+f&#39;&#39;&#39;(\xi_{-}))
+\end{aligned}
+\]</span></p></li>
+<li><p>五点公式 <span class="math display">\[
+\begin{aligned}
+&amp;f(x_0+h)=f(x_0)+hf&#39;(x_0)+\frac{h^2}{2}f&#39;&#39;(x)+\frac{h^3}{3!}f&#39;&#39;&#39;(x)\\
+&amp;\quad\quad\quad\quad\quad
++\frac{h^4}{4!}f^{(4)}(x)+\frac{h^5}{5!}f^{(5)}(\xi_{+})\\
+&amp;
+f(x_0-h)=f(x_0)-hf&#39;(x_0)+\frac{h^2}{2}f&#39;&#39;(x)-\frac{h^3}{3!}f&#39;&#39;&#39;(x)\\
+&amp;\quad\quad\quad\quad\quad
++\frac{h^4}{4!}f^{(4)}(x)-\frac{h^5}{5!}f^{(5)}(\xi_{-})\\
+  &amp;f(x_0+2h)=f(x_0)+2hf&#39;(x_0)+2h^2f&#39;&#39;(x)+\frac{4h^3}{3}f&#39;&#39;&#39;(x)\\
+  &amp;\quad\quad\quad\quad\quad+\frac{2h^4}{3}f^{(4)}(x)+\frac{(2h)^5}{5!}f^{(5)}(\xi_{+})\\
+  &amp;f(x_0-2h)=f(x_0)-2hf&#39;(x_0)+2h^2f&#39;&#39;(x)-\frac{4h^3}{3}f&#39;&#39;&#39;(x)\\
+  &amp;\quad\quad\quad\quad\quad+\frac{2h^4}{3}f^{(4)}(x)-\frac{(2h)^5}{5!}f^{(5)}(\xi_{-})\\
+&amp; \frac{8(f(x_0+h)-f(x_0-h))-(f(x_0+2h)-f(x_0-2h))}{12h}\\
+&amp;\quad\quad\quad\quad\quad=f&#39;(x)+O(h^5)\\
+&amp; R = O(h^5)
+\end{aligned}
+\]</span></p></li>
+</ul>
+<h4 id="积分">积分</h4>
+<h5 id="langrange插值法">langrange插值法</h5>
+<ul>
+<li><p>一阶插值 函数已知(<span class="math inline">\(x_0\)</span>,<span
+class="math inline">\(y_0\)</span>),(<span
+class="math inline">\(x_1\)</span>,<span
+class="math inline">\(y_1\)</span>)两点。可以取函数。 <span
+class="math display">\[
+y = y_0\frac{x-x_1}{x_0-x_1}+y_1\frac{x-x_0}{x_1-x_0}
+\]</span> 实际上可以引入lagrange插值基函数 <span class="math display">\[
+l_0(x)=\frac{x-x_1}{x_0-x_1}\\
+l_1(x)=\frac{x-x_0}{x_1-x_0}
+\]</span>
+插值基函数的特点:再角标对应的点数值为1，在其他角标对应的点数值为0</p></li>
+<li><p>高阶插值(比如说n阶)</p>
+<p>函数已知点(<span class="math inline">\(x_0\)</span>,<span
+class="math inline">\(y_0\)</span>),(<span
+class="math inline">\(x_1\)</span>,<span
+class="math inline">\(y_1\)</span>) ... (<span
+class="math inline">\(x_n\)</span>,<span
+class="math inline">\(y_n\)</span>)</p>
+<p>可以取函数: <span class="math display">\[
+y = y_0l_0(x)+y_1l_1(x)+y_2l_2(x)...+y_nl_n(x)
+\]</span> 插值基函数: <span class="math display">\[
+l_i(x)=\frac{(x-x_0)(x-x_1)...(x-x_{i-1})(x-x_{i+1})...(x-x_n)}{(x_i-x_0)(x_i-x_1)...(x_i-x_{i-1})(x_i-x_{i+1})...(x_i-x_n)}
+\]</span> 比如说二阶插值 <span class="math display">\[
+y =
+y_0\frac{(x-x_1)(x-x_2)}{(x_0-x_1)(x_0-x_2)}+y_1\frac{(x-x_0)(x-x_1)}{(x_1-x_0)(x_1-x_2)}+y_2\frac{(x-x_0)(x-x_1)}{(x_2-x_0)(x_2-x_1)}
+\]</span> 比如说三阶插值 <span class="math display">\[
+\begin{aligned}
+y =
+y_0\frac{(x-x_1)(x-x_2)(x-x_3)}{(x_0-x_1)(x_0-x_2)(x_0-x_3)}+y_1\frac{(x-x_0)(x-x_2)(x-x_3)}{(x_1-x_0)(x_1-x_2)(x_1-x_3)}+\\y_2\frac{(x-x_0)(x-x_1)(x-x_3)}{(x_2-x_0)(x_2-x_1)(x_2-x_3)}+y_3\frac{(x-x_0)(x-x_1)(x-x_2)}{(x_3-x_0)(x_3-x_1)(x_3-x_2)}
+\end{aligned}
+\]</span></p></li>
+<li><p>runge现象 插值阶数比较高时反而效果不好</p></li>
+</ul>
+<h5 id="三种插值积分方式">三种插值积分方式</h5>
+<ul>
+<li><p>辛普生成公式(simpson)</p>
+<p>考虑三个点(<span class="math inline">\(x_{i}\)</span>,<span
+class="math inline">\(y_{i}\)</span>),(<span
+class="math inline">\(x_{i+1}\)</span>,<span
+class="math inline">\(y_{i+1}\)</span>),(<span
+class="math inline">\(x_{i+2}\)</span>,<span
+class="math inline">\(y_{i+2}\)</span>) <span class="math display">\[
+y =
+y_{i}\frac{(x-x_{i+1})(x-x_{i+2})}{(x_i-x_{i+1})(x_i-x_{i+2})}+y_{i+1}\frac{(x-x_i)(x-x_{i+2})}{(x_{i+1}-x_{i})(x_{i+1}-x_{i+2})}\\
++y_{i+2}\frac{(x-x_i)(x-x_{i+1})}{(x_{i+2}-x_i)(x_{i+2}-x_{i+1})}
+\]</span> 将y从<span class="math inline">\(x_i\)</span>积分到<span
+class="math inline">\(x_{i+2}\)</span> <span class="math display">\[
+I = \int_{x_{i}}^{x_{i+2}}ydx
+\]</span> 积分得到(<em>草稿E1</em>) <span class="math display">\[
+\begin{aligned}
+&amp;I =
+y_i\frac{-\frac{1}{3}(x_i-x_{i+2})^2+x_i(x_i-x_{i+2})+\frac{1}{2}(x_{i+1}+x_{i+2})(x_i+x_{i+2})-x_i^2-x_{i+1}x_{i+2}}{x_i-x_{i+1}}\\
+&amp;
++y_{i+1}\frac{1}{(x_{i+1}-x_{i})(x_{i+1}-x_{i+2})}\Big(\frac{1}{3}\left((x_{i+2}-x_{i+1}\right)^3-(x_i-x_{i+1})^3)
+\\
+&amp;\quad\quad
++\frac{1}{2}\left((x_{i+2}-x_{i+1})^2-(x_i-x_{i+1})^2\right)(2x_{i+1}-x_i-x_{i+2})\\
+&amp;\quad\quad+(x_{i+1}-x_i)(x_{i+1}-x_{i+2})(x_{i+2}-x_i)\Big)\\
+&amp;+y_{i+2}\frac{1}{(x_{i+2}-x_i)(x_{i+2}-x_{i+1})}\Big(\frac{1}{3}\left((x_{i+2}-x_{i+1})^3-(x_i-x_{i+1})^3\right)\\
+&amp;\quad\quad
++\frac{1}{2}(x_{i+1}-x_i)\left((x_{i+2}-x_{i+1})^2-(x_i-x_{i+1})^2\right)\Big)
+\end{aligned}
+\]</span> 若认为<span class="math inline">\(x_i\)</span>,<span
+class="math inline">\(x_{i+1}\)</span>,<span
+class="math inline">\(x_{i+2}\)</span>之间相差h。则简化积分为 <span
+class="math display">\[
+I=\frac{1}{3}h(y_i+4y_{i+1}+y_{i+2})
+\]</span> 在此情况下，若将积分区间划分为n等分(从<span
+class="math inline">\(x_0\)</span>到<span
+class="math inline">\(x_n\)</span>,n一定是2的整数倍),h表示相邻两点之间的距离。可以将积分表示为
+<span class="math display">\[
+I =
+\frac{1}{3}h(f(x_0)+4\Sigma_{j=0}^{\frac{n}{2}-1}f(x_0+h+2jh)+2\Sigma_{i=0}^{\frac{n}{2}-2}f(x_0+2h+2jh)+f(x_n))
+\]</span></p></li>
+<li><p>simpson<span
+class="math inline">\(\frac{3}{8}\)</span>算法。Newton积分公式</p>
+<p>如果已知四个点(<span class="math inline">\(x_{i}\)</span>,<span
+class="math inline">\(y_{i}\)</span>),(<span
+class="math inline">\(x_{i+1}\)</span>,<span
+class="math inline">\(y_{i+1}\)</span>),(<span
+class="math inline">\(x_{i+2}\)</span>,<span
+class="math inline">\(y_{i+2}\)</span>),(<span
+class="math inline">\(x_{i+3}\)</span>,<span
+class="math inline">\(y_{i+3}\)</span>) <span class="math display">\[
+\begin{aligned}
+y =&amp;
+y_i\frac{(x-x_{i+1})(x-x_{i+2})(x-x_{i+3})}{(x_i-x_{i+1})(x_i-x_{i+2})(x_i-x_{i+3})}\\
+&amp;+y_{i+1}\frac{(x-x_i)(x-x_{i+2})(x-x_{i+3})}{(x_{i+1}-x_i)(x_{i+1}-x_{i+2})(x_{i+1}-x_{i+3})}\\
+&amp;+y_{i+2}\frac{(x-x_i)(x-x_{i+1})(x-x_{i+3})}{(x_{i+2}-x_i)(x_{i+2}-x_{i+1})(x_{i+2}-x_{i+3})}\\
+&amp;+y_{i+3}\frac{(x-x_i)(x-x_{i+1})(x-x_{i+2})}{(x_{i+3}-x_i)(x_{i+3}-x_{i+1})(x_{i+3}-x_{i+2})}
+\end{aligned}
+\]</span> 在区间<span class="math inline">\(x_{i}\)</span>到<span
+class="math inline">\(x_{i+3}\)</span>之间积分得(认为间距相等且是h)
+<span class="math display">\[
+I =\frac{3}{8}h(f(x_i)+3f(x_{i+1})+3f(x_{i+2})+f(x_{i+3}))
+\]</span> 若将积分区间分为从<span
+class="math inline">\(x_0\)</span>到<span
+class="math inline">\(x_n\)</span>一共n个区间,且n是3得整数倍。 <span
+class="math display">\[
+\begin{aligned}
+I =
+\frac{3}{8}h(f(x_0)+\Sigma_{j=0}^{j=\frac{n}{3}-1}3(f(x_0+h+3jh)+f(x_0+2h+3jh))\\+
+\Sigma_{j=0}^{j=\frac{n}{3}-2}2f(x_0+3h+3jh)+f(x_0+nh))
+\end{aligned}
+\]</span></p></li>
+<li><p>线性插值积分</p>
+<p>如果已知两个点的坐标(<span class="math inline">\(x_i\)</span>,<span
+class="math inline">\(y_i\)</span>),(<span
+class="math inline">\(x_{i+1}\)</span>,<span
+class="math inline">\(y_{i+1}\)</span>) <span class="math display">\[
+I = \frac{1}{2}h(f(x_i)+f(x_{i+1}))
+\]</span> 若将区间划分为n等分，从<span
+class="math inline">\(x_0\)</span>到<span
+class="math inline">\(x_n\)</span>。每一份之间距离为h。 <span
+class="math display">\[
+I = \frac{1}{2}h(f(x_0)+\Sigma_{j=0}^{j=n-2}2f(x_0+h+jh)+f(x_0+nh))
+\]</span></p></li>
+</ul>
+<p>有一个二重积分的例子几乎用到了所有的技巧:</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;F:\BaiduSyncdisk\计算物理与程序设计\第二次课PPT及源程序\第二次课\chap1_integration_double.m&quot;</span></span><br></pre></td></tr></table></figure>
+<h4 id="寻找函数的根">寻找函数的根</h4>
+<h5 id="二分法">二分法</h5>
+<p>二分法的流程:初始化f(x),a,b,<span
+class="math inline">\(\epsilon\)</span>(误差标准)。取x =
+(a+b)/2。若|b-a|&lt;<span
+class="math inline">\(\epsilon\)</span>,则结束运算,输出x。计算f(x),若f(a)f(x)&gt;0,则a
+= x,负责令b = x,返回x=(a+b)/2。</p>
+<p>一个老师的例子(<span
+class="math inline">\(f(x)=2x^3-5x-1\)</span>),matlab
+技巧方面,用了二分法(封装在函数里面)。</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;F:\BaiduSyncdisk\计算物理与程序设计\第三次课PPT及源程序\chap1_example_3_bisection_function.m&quot;</span></span><br></pre></td></tr></table></figure>
+<h5 id="newton-raphson方法">newton-Raphson方法</h5>
+<p>newton-Raphson方法的流程: 初始化<span
+class="math inline">\(x_0\)</span>,误差标准<span
+class="math inline">\(\delta\)</span>,<span
+class="math inline">\(\epsilon\)</span>,设置迭代次数k=0。计算<span
+class="math inline">\(x_{k+1}=x_k-\frac{f(x_k)}{f&#39;(x_k)}\)</span>,迭代k
+= k+1。若<span
+class="math inline">\(|f(x_k)|\leq\delta\land|x_{k+1}-x_k|&lt;\epsilon\)</span>则退出循环。</p>
+<p>老师的一个例子用牛顿法求解<span
+class="math inline">\(f(x)=e^x-1.5-tan^{-1}x\)</span>初始点<span
+class="math inline">\(x_0=-7.0\)</span>,又用二分法在[-16,-7]上面的解</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;F:\BaiduSyncdisk\计算物理与程序设计\第三次课PPT及源程序\chap1_example_4_bisection_newton.m&quot;</span></span><br></pre></td></tr></table></figure>
+<h5 id="弦割法">弦割法</h5>
+<p>需要两个启动点 <span class="math display">\[
+f&#39;(x_k) = \frac{f(x_k)-f(x_{k-1})}{x_k-x_{k-1}}\\
+x_{k+1} = x_{k}-\frac{f(x_k)}{f&#39;(x_k)}\\
+\]</span></p>
+<p>停止的标志: <span class="math display">\[
+|x_{k+1}-x_{k}|&lt;\epsilon \land |f(x_k)|&lt;\delta
+\]</span> 弦割法的计算流程。初始化<span
+class="math inline">\(x_0\)</span>,<span
+class="math inline">\(x_1\)</span>,误差标准<span
+class="math inline">\(\delta\)</span>和<span
+class="math inline">\(\epsilon\)</span>,设置k=0。若<span
+class="math inline">\(|f(x_K)|\leq\delta\land|x_K-x_{k+1}|\leq\epsilon\)</span>则停止。计算<span
+class="math inline">\(x_{k+1}=x_k-f(x_K)\frac{x_k-x_{k-1}}{f(x_k)-f(x_{k-1})}\)</span>。k=k+1,转到2。</p>
+<p>老师的例:<span
+class="math inline">\(xe^x-1=0,x_0=0.5,x_1=0.6\)</span>,例子程序。</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;F:\BaiduSyncdisk\计算物理与程序设计\第三次课PPT及源程序\chap1_example_5_bisection_newton_secant.m&quot;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>三种求根方法的总结
+最好先用二分法找到大概位置，再用另外两个方法找到根的具体位置。</li>
+</ul>
+<h5 id="方程多根">方程多根</h5>
+<ul>
+<li><p>先逐步搜索找到根存在区间，再用上面三种方法找到精确值。
+老师的一个例子(程序比较复杂233)</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;F:\BaiduSyncdisk\计算物理与程序设计\第三次课PPT及源程序\chap1_example_6_several.m&quot;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h5 id="matlab程序">Matlab程序</h5>
+<ul>
+<li>fzero(f,[3,4]) (f是句柄函数)</li>
+<li>roots(c) 多项式的全部零点</li>
+<li>fsolve 非线性方程组的数值解</li>
+</ul>
+<h4 id="微分方程求解">微分方程求解</h4>
+<h5 id="初值问题">初值问题</h5>
+<ul>
+<li>初值问题的题目形式 <span class="math display">\[
+\frac{dy}{dx}=f(x,y)\\
+x\in(a,b)\\
+y(x=a)=y_0
+\]</span></li>
+</ul>
+<h6 id="euler-法">Euler 法</h6>
+<p><span class="math display">\[
+y_{n+1}=y_{n}+hf(x_n,y_n)
+\]</span></p>
+<ul>
+<li>老师课上的例子 <span class="math display">\[
+m\frac{d^2x}{d^2t}=f(x,t)\\
+p = m\frac{dx}{dt}\\
+\frac{dp}{dt}=f(x,t)\\
+\frac{dx}{dt}=p/m\\
+x_{n+1}=hp_{n}/m+x_{n+1}\\
+p_{n+1}=hf(x_n,tn)+p_n
+\]</span> <figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;F:\BaiduSyncdisk\计算物理与程序设计\第四次课PPT及源程序\第四次课PPT及源程序\chapter2_example_2_harmonic_oscillator.m&quot;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h6 id="taylor-级数法">Taylor 级数法</h6>
+<p>误差大概是<span class="math inline">\(h^2\)</span>的量级。 <span
+class="math display">\[
+y(x_n+h)=y(x_n)+hy&#39;(x_n)+\frac{1}{2}h^2y&#39;&#39;(x_n)
+\]</span> 实际上 <span class="math display">\[
+y&#39;(x_n)=f(x_n,y_n)\\
+y&#39;&#39;(x_n)=\frac{\partial }{\partial
+x}f(x_n,y_n)+f\frac{\partial}{\partial y}f(x_n,y_n)
+\]</span></p>
+<h6 id="adams-bashforth-二步法">Adams-Bashforth 二步法</h6>
+<p>需要多个启动点的都叫多步法。 <span class="math display">\[
+y_{n+1}=y_n+\int_{x_n}^{x_{n+1}}f(x,y(x))dx\\
+y_{n+1}
+=y_n+h(\frac{3}{2}f_n-\frac{1}{2}f_{n-1})
+\]</span></p>
+<h6 id="ab四步法">AB四步法</h6>
+<p><span class="math display">\[
+y_{n+1}=y_n+h\frac{1}{24}(55f_n-59f_{n-1}+37f_{n-2}-9f_{n-3})
+\]</span></p>
+<p>启动点用Taylor级数法得到。</p>
+<ul>
+<li>上课的一个例题 <span class="math display">\[
+\frac{dy}{dx}=-xy  y(0)=1
+\]</span> <figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;F:\BaiduSyncdisk\计算物理与程序设计\第五次课-计算物理第2章-常  微分方程的初值问题\chapter2_example_4_Adams_Bashforth.m&quot;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h6 id="隐式法">隐式法</h6>
+<p>类似于AB方法，不过在插值时用了<span
+class="math inline">\(f_{n+1}\)</span>这一项。例如:</p>
+<p>因为方程左右都含有<span
+class="math inline">\(y_{n+1}\)</span>,所以叫做隐式法。</p>
+<ul>
+<li><p>Adams-Moulton一步法 <span class="math display">\[
+\begin{aligned}
+y(x_{n+1})&amp;=y(x_n)+\int_{x_n}^{x_{n+1}}f(x,y(x))dx\\
+&amp;=y(x_n)+\int_{x_n}^{x_{n+1}}\left(f_n\frac{x-x_{n+1}}{x_n-x_{n+1}}+f_{n+1}\frac{x-x_n}{x_{n+1}-x_n}\right)dx\\
+&amp;=y_n+\frac{h}{2}[f_n+f_{n+1}]+O(h^3)
+\end{aligned}
+\]</span></p></li>
+<li><p>Adams-Moulton二步法 <span class="math display">\[
+y_{n+1}=y_n+\frac{h}{12}(5f_{n+1}+8f_n-f_{n-1})
+\]</span></p></li>
+<li><p>AM三步法 <span class="math display">\[
+y_{n+1}=y_n+\frac{h}{24}(9f_{n+1}+19f_n-5f_{n-1}+f_{n-2})
+\]</span></p></li>
+</ul>
+<h6
+id="对隐式法ab法euler法的一点点讨论">对隐式法,AB法,Euler法的一点点讨论</h6>
+<p>AM隐式法不能直接使用,但是AB和Euler
+方法可以直接使用,尔后用AM法进行矫正。</p>
+<p>有一个常用的这样的算法是AB四步法和AM三步法的结合</p>
+<h6 id="改进euler方法-梯形公式">改进Euler方法-梯形公式</h6>
+<p><span class="math display">\[
+y_{n+1}=y_n+hf_n\\
+y_{n+1}=y_n+h\frac{1}{2}(f_{n+1}+f_n)
+\]</span></p>
+<p>第一步是预估,第二步是矫正</p>
+<h6 id="rung-kutta算法">Rung-kutta算法</h6>
+<ul>
+<li><p>基本思想 <span class="math display">\[
+y_{n+1}=y_n+h\Sigma_{i=1}^{N}\lambda_iK_1\\
+K_1=f(x_n,y_n)\\
+K_i=f(x_n+hc_i,y_n+hc_i(\Sigma_{j=1}^{i-1}a_{ij}K_j))
+\]</span>
+对上面的式子进行taylor展开,要求尽可能多的项数和级数相同。</p></li>
+<li><p>二阶 <span class="math display">\[
+y_{n+1}=y_n+\frac{h}{2}K_1+\frac{h}{2}K_2\\
+K_1=f(x_n,y_n)\\
+K_2=f(x_n+h,y_n+hK_1)
+\]</span></p></li>
+<li><p>三阶 <span class="math display">\[
+\begin{aligned}
+&amp;y_{n+1}=y_n+\frac{h}{6}(K_1+4K_2+K_3)\\
+&amp;K_1=f(x_n,y_n)\\
+&amp;K_2=f(x_n+\frac{h}{2},y_n+h\frac{K_1}{2})\\
+&amp;K_3=f(x_n+h,y_n+h(-K_1+2K_2))
+\end{aligned}
+\]</span></p></li>
+<li><p>四阶(认为是最常用的方法) <span class="math display">\[
+\begin{aligned}
+&amp;y_{n+1}=y_n+\frac{h}{6}(K_1+2K_2+2K_3+K_4)\\
+&amp;K_1=f(x_n,y_n)\\
+&amp;K_2=f(x_n+\frac{h}{2},y_n+\frac{h}{2}K_1)\\
+&amp;K_3=f(x_n+\frac{h}{2},y_n+\frac{h}{2}K_2)\\
+&amp;K_4=f(x_n+h,y_n+hK_3)
+\end{aligned}
+\]</span></p></li>
+<li><p>注:对于多因变量(比如<span
+class="math inline">\(y_1,y_2,y_3\)</span>),是类似的。</p></li>
+</ul>
+<h6 id="稳定性问题">稳定性问题</h6>
+<p>取实验方程 <span class="math display">\[
+y&#39;=\lambda y
+\]</span> 假设在<span class="math inline">\(y_n\)</span>引入了误差<span
+class="math inline">\(\rho_n\)</span>,如果在后面误差绝对值不增加,就说这个数值方法对步长h和<span
+class="math inline">\(\lambda\)</span>常数是稳定的。步长h和<span
+class="math inline">\(\lambda\)</span>有其相应的允许范围,叫做该方法的绝对稳定区域。</p>
+<ul>
+<li>对于四阶RK算法<span class="math inline">\(\frac{dy}{dx}=\lambda
+y\)</span> <span class="math display">\[
+\rho_{n+1}=[1+(h\lambda)+\frac{(h\lambda)^2}{2!}+\frac{(h\lambda)^3}{3!}+\frac{(h\lambda)^4}{4!}]\rho_n
+\]</span> 容易得到稳定区域是<span class="math inline">\(\lambda
+h\in(-2.78,0)\)</span> ###### 常微分方程的numerov算法</li>
+</ul>
+<p>这个算法只能用于特定的微分方程。(很多时候K写为了<span
+class="math inline">\(k^2\)</span>)<br />
+<span class="math display">\[
+\frac{d^2y}{dx^2}+K(x)y=S(x)
+\]</span> 利用二阶导数的差分公式 <span class="math display">\[
+\frac{y_{n+1}+y_{n-1}-2y_n}{h^2}=\frac{2\frac{1}{2}y^{(2)}h^2+O(h^4)}{h^2}=\frac{2\frac{1}{2}y^{(2)}h^2+2\frac{1}{4!}y^{(4)}h^4+O(h^6)}{h^2}
+\]</span> 对微分方程求导: <span class="math display">\[
+\begin{aligned}
+\frac{d^4y}{dx^4}&amp;=\frac{d^2(S(x)-K(x)y)}{dx^2}\\&amp;
+=\frac{S_{n+1}+S_{n-1}-2S_n}{h^2}-\frac{K_{n+1}y_{n+1}+K_{n-1}y_{n-1}-2K_{n}y_n}{h^2}+O(h^4)
+\end{aligned}
+\]</span> 而: <span class="math display">\[
+\begin{aligned}
+S_n-K_ny_n=&amp;\frac{y_{n+1}+y_{n-1}-2y_n}{h^2}\\
+&amp;-\frac{1}{12}(S_{n+1}+S_{n-1}-2S_n-K_{n+1}y_{n+1}-K_{n-1}y_{n-1}+2K_{n}y_n)\\
+&amp;+O(h^4)
+\end{aligned}
+\]</span> 可以将上式写为<span
+class="math inline">\(y_{n+1},y_{n-1},y_n\)</span>的递推关系 <span
+class="math display">\[
+\begin{aligned}
+y_{n+1}&amp;(1+\frac{1}{12}h^2K_{n+1})+y_{n-1}(1+\frac{1}{12}h^2K_{n-1})+2y_n(-1+\frac{5}{12}h^2K_n)\\
+&amp;=\frac{h^2}{12}(S_{n+1}+10S_n+S_{n-1})
+\end{aligned}
+\]</span> 这个解法不可以自启动,一般设置启动点的方法是泰勒级数法。 <span
+class="math display">\[
+y_1=y_0+hy_0&#39;+\frac{1}{2}h^2y_0&#39;&#39;
+\]</span></p>
+<h3
+id="第三章-常微分方程的边值问题与本征值问题">第三章-常微分方程的边值问题与本征值问题</h3>
+<h4 id="边值问题的解">边值问题的解</h4>
+<h5 id="线性边值问题的迭加法">线性边值问题的迭加法</h5>
+<p>问题描述 <span class="math display">\[
+y&#39;&#39;=f(x,y,y&#39;)
+\]</span> 如果可以写为 <span class="math display">\[
+y&#39;&#39;+p(x)y&#39;+q(x)y=f(x)
+\]</span> 则方程组是线性的。</p>
+<p>如果边值问题可以被描述为<span
+class="math inline">\(y(x=a)=\alpha,y(x=b)=\beta\)</span>,则可以视为两组边值结果线性叠加的效果<span
+class="math inline">\((y(a)=\alpha,y&#39;(a)=0,y&#39;&#39;+p(x)y&#39;+q(x)y=f(x));(y(a)=0,y&#39;(a)=1,y&#39;&#39;+p(x)y&#39;+q(x)y=0)\)</span></p>
+<p>将他们的解分别记为<span class="math inline">\(y_1\)</span>与<span
+class="math inline">\(y_2\)</span>,则总的解可以写为。 <span
+class="math display">\[
+y(x)=y_1(x)+\frac{\beta-y_1(b)}{y_2(b)}y_2(x)
+\]</span></p>
+<h5 id="非线性边值问题的打靶法">非线性边值问题的打靶法</h5>
+<p>定义初始条件:<span
+class="math inline">\(y(a)=\alpha,y&#39;(a)=s\)</span>,则可以根据常微分方程的初值问题的解法得到<span
+class="math inline">\(y(b,s)\)</span></p>
+<p>考虑方程 <span class="math display">\[
+F(s)=y(b,s)-\beta
+\]</span> 求下一个点的公式可以用弦割法: <span class="math display">\[
+s_{k+1} = s_{k}-\frac{s_k-s_{k-1}}{y(b,s_k)-y(b,s_{k-1})}(y(b,s)-\beta)
+\]</span></p>
+<ol type="1">
+<li>给定初始点的斜率猜测值S1；</li>
+<li>用常微分方程的初值问题解法（如RK算法）求解y(b,S1);</li>
+<li>给出另一个斜率猜测值S2作为弦割法的第二个启动点;</li>
+<li>用常微分方程的初值问题解法（如RK算法）求解y(b,S2);</li>
+<li>IF (abs(y(b,S1)-y(b))&lt;精度 ), y(x)=y(x,S1);</li>
+<li>IF (abs(y(b,S2)-y(b))&lt;精度 ), y(x)=y(x,S2); else</li>
+<li>利用弦割法迭代公式求出下一个斜率S3；</li>
+<li>用常微分方程的初值问题解法（如RK算法）求解y(b,S3);</li>
+<li>IF (abs(y(b,S3)-y(b))&lt;精度  ), y(x)=y(x,S3); else S1=S2;
+S2=S3；回到第7步</li>
+<li>得到边值问题的解y(x)=y(x,S3);</li>
+</ol>
+<ul>
+<li>三类边值问题对应打靶法的参数选取
+<ul>
+<li>第一类边值问题<span
+class="math inline">\(y(a)=\alpha,y(b)=\beta\)</span>,显而易见,取<span
+class="math inline">\(y&#39;(a)=s\)</span>为参数</li>
+<li>第二类边值问题<span
+class="math inline">\(y&#39;(a)=\alpha,y&#39;(b)=\beta\)</span>,取<span
+class="math inline">\(y(a)\)</span>为参数</li>
+<li>第三类边值问题<span
+class="math inline">\(y&#39;(a)=\beta_0+\alpha_0y(a),y&#39;(b)=\beta_1+\alpha_1y(b)\)</span>可以将<span
+class="math inline">\(y(a)\)</span>取为参数<span
+class="math inline">\(y_0\)</span>,则<span
+class="math inline">\(y&#39;(a)=\beta_0+\alpha_0y_0\)</span></li>
+</ul></li>
+</ul>
+<h5 id="线性常微分方程的差分方法">线性常微分方程的差分方法</h5>
+<p><span
+class="math display">\[y&#39;&#39;+p(x)y&#39;+q(x)y=f(x)\]</span></p>
+<p>将差分表示的微商带入 <span class="math display">\[
+\frac{y_{n+1}+y_{n-1}-2y_n}{h^2}+p(x_n)\frac{y_{n+1}-y_{n-1}}{2h}+q(x_n)y_n=f(x)
+\]</span> 即 <span class="math display">\[
+y_{n-1}(2-hp(x_n))+y_n(-4+2h^2q(x_n))+y_{n+1}(2+hp(x_n))=2h^2f(x_n)
+\]</span></p>
+<p>考虑 <span class="math inline">\(y_0,y_1...y_{n-1}\)</span>
+(n-1)个点,与n-1个方程</p>
+<p><span class="math display">\[
+\begin{equation}
+\begin{aligned}
+\begin{bmatrix}
+2-hp_1 &amp; -4+2h^2q_1 &amp; 2+hp_1 &amp;  ... &amp; ...  &amp; ...  \\
+... &amp; 2-hp_2 &amp; -4+2h^2q_2 &amp;  2+hp_2 &amp; ...  &amp; ...  \\
+... &amp; ... &amp; ... &amp;  ... &amp; ...  &amp; ...  \\
+... &amp; ... &amp; ... &amp;  ... &amp; ...  &amp; ...  \\
+... &amp; ... &amp;... &amp; 2-hp_{n-1}  &amp; -4+2h^2q_{n-1}  &amp;
+2-hp_{n-1}  \\
+\end{bmatrix}
+\begin{bmatrix}
+y_0\\
+y_1\\
+...\\
+y_{n-1}\\
+y_{n}
+\end{bmatrix}\\
+=
+\begin{bmatrix}
+2h^2f_0\\
+2h^2f_1\\
+...\\
+2h^2f_{n-1}\\
+2h^2f_{n}
+\end{bmatrix}
+\end{aligned}
+\end{equation}
+\]</span></p>
+<p>但是有n+1个未知数,需要再带上两个边界的方程。总之就是把上面的矩阵扩展为方形。</p>
+<h4 id="本征值问题的解">本征值问题的解:</h4>
+<p>比如说波动方程的分离变量后的空间部分 <span class="math display">\[
+y&#39;&#39;-k^2y=0
+\]</span> 可以取初始条件<span
+class="math inline">\(y(x=0)=\alpha,y&#39;(x=0)=\delta\)</span>.<span
+class="math inline">\(\delta\)</span>实际上可以随便取值.....因为方程是其次的,而且在边界点的函数值刚好是0。然后就用二分法的打靶法,将k设置为参量,即可。
+##### 求解薛定谔方程的本征值问题 <span
+class="math inline">\(schr\ddot{o}dinger\)</span> -Equation一般表示为:
+<span class="math display">\[
+\begin{align*}
+\frac{\partial^2}{\partial
+x^2}\psi(x)+\frac{2m}{\hbar^2}(E-V(x))\psi=0\\
+\frac{\partial^2}{\partial x^2}\psi(x)+(\epsilon-v(x))\psi=0
+\end{align*}
+\]</span> 其中,<span class="math inline">\(\epsilon =
+\frac{2m}{\hbar^2}E\)</span>, <span
+class="math inline">\(v(x)=\frac{2m}{\hbar^2}V(x)\)</span>.
+一般认为这类方程只在一定的区间内需要被考虑,比如说<span
+class="math inline">\([x_{min},x_{max}]\)</span>,在这个区间之外,一般认为<span
+class="math inline">\(v(x)\to +\infty\)</span> ,
+所以相当于波函数就是0了。而在这个区间内,我们经常把势能写成一个凹函数,并且满足<span
+class="math inline">\(v(x_{min})=v(x_{max})=0\)</span>。我们一般考虑束缚态,这样E&lt;0。这样，满足<span
+class="math inline">\(E-V(x)\)</span>的区间我们可以标记为<span
+class="math inline">\([x_{m1},x_{m2}]\)</span>。
+我们的解法是分别给定初值条件: <span class="math display">\[
+\begin{align}
+\begin{cases}
+\psi_{&lt;}(x_{min})=0\\
+\frac{\partial}{\partial x}\psi_{&lt;}(x_{min})=\delta
+\end{cases}
+\\
+\begin{cases}
+\psi_{&gt;}(x_{\max})=0\\
+\frac{\partial}{\partial x}\psi_{&gt;}(x_{max})=\delta&#39;
+\end{cases}
+\end{align}
+\]</span> 这样可以得到两个解<span
+class="math inline">\(\psi_{&lt;}(x)\)</span>和<span
+class="math inline">\(\psi_{&gt;}(x)\)</span>。我们要做的具体工作是:
+先设定本征值,解出两个解,再对其中一个乘以系数,使得他们在<span
+class="math inline">\(\psi(x_{m1})\)</span>处的函数值相等,然后再用向后差分的方法,对比两者再<span
+class="math inline">\(x_{m1}\)</span>点的一阶导数是否一样,如果一样,就认为这个本征值就是方程的本征值。</p>
+<h3 id="第四章-偏微分方程的数值求解">第四章 偏微分方程的数值求解</h3>
+<h4 id="偏微分方程的分类">偏微分方程的分类</h4>
+<p>二阶偏微分方程常见的形式可以写为 <span class="math display">\[
+AU_{xx}+2BU_{xy}+CU_{yy}+DU_x+EU_y+FU=0
+\]</span> 其中,<span
+class="math inline">\(A,B,C\)</span>为参数且取决于x,y。
+如果再xy平面上有<span class="math inline">\(A^2+B^2+C^2&gt;0\)</span>
+,则该偏微分方程再该平面上为二阶偏微分方程。 * 如果<span
+class="math inline">\(B^2-AC&lt;0\)</span>, 则为椭圆形方程。 * 如果<span
+class="math inline">\(B^2-AC=0\)</span>, 则为抛物型方程。 * 如果<span
+class="math inline">\(B^2-AC&gt;0\)</span>, 则为双曲型方程。 ####
+椭圆形方程的求解 ##### 什么是椭圆形方程
+Poisson方程在这里实际上是椭圆形方程的代表 Possion方程可以写为: <span
+class="math display">\[
+\Delta u = \nabla^2(u)=\frac{\partial^2u}{\partial x^2}
++\frac{\partial^2u}{\partial y^2}=S(x,y)
+\]</span> ##### Jacobi 迭代法 将空间划分为一些格点<span
+class="math inline">\(u_{i,j}\)</span>用来表示x方向第i个,
+y方向第j个格点。 先假设u有一个分布叫做<span
+class="math inline">\(u^0\)</span>, 利用差分法,迭代得到下一次的分布。
+<span class="math display">\[
+\frac{u_{i+1,j}^n+u_{i-1,j}^n-2u_{i,j}^{n+1}}{h_1^2}+\frac{u_{i,j+1}^n+u_{i,j-1}^n-2u_{i,j}^{n+1}}{h_2^2}=S_{i,j}^n
+\]</span>
+上面的式子中,n代表上一次的分布,n+1代表下一次的分布,理论上,当迭代前后在一个格点上函数值没有变化时，说明找到了possion方程的解。
+将上面的式子化简之后得到的式子是: <span class="math display">\[
+u_{i,j}^{n+1}=(\frac{u_{i+1,j}^n+u_{i-1,j}^n}{h_1^2}+\frac{u_{i,j+1}^n+u_{i,j-1}^n}{h_2^2}-S_{i,j}^n)\frac{1}{\frac{2}{h_1^2}+\frac{2}{h_2^2}}\tag{1}
+\]</span> ##### Gauss-Seidel松弛迭代法 在[[计算物理#Jacobi
+迭代法|Jacobi迭代法]],我们在迭代生成<span
+class="math inline">\(u^{n+1}_{i,j}\)</span>时,实际上已经有算出<span
+class="math inline">\(u_{i-1,j}^{n+1},u_{i,j-1}^{n+1}\)</span>。在这样的情况下,我们可以用已经算出来的函数值来修正Jacobi迭代法。
+按照这个思想, 迭代后的函数值可以表示为: <span class="math display">\[
+\begin{aligned}
+u_{i,j}^{n+1}=(1-w)(\frac{u_{i+1,j}^n+u_{i-1,j}^n}{h_1^2}+\frac{u_{i,j+1}^n+u_{i,j-1}^n}{h_2^2}-S_{i,j}^n)\frac{1}{\frac{2}{h_1^2}+\frac{2}{h_2^2}}+\\
+w(\frac{u_{i+1,j}^n+u_{i-1,j}^{n+1}}{h_1^2}+\frac{u_{i,j+1}^n+u_{i,j-1}^{n+1}}{h_2^2}-S_{i,j}^n)\frac{1}{\frac{2}{h_1^2}+\frac{2}{h_2^2}}
+\end{aligned}
+\]</span> #### 抛物型方程的求解 ##### 什么是抛物型方程
+<strong>传导问题</strong>的<strong>扩散方程</strong>是典型的抛物型方程。
+方程的形式一般为: <span class="math display">\[
+\frac{\partial\Phi}{\partial t}=\frac{\partial^2\Phi}{\partial
+x^2}+S(x,t)
+\]</span> ##### 显式差分法
+下面的式子中的下角标代表着坐标空间(实际上就是坐标),上角标代表着时间空间(代表着时间)。
+<span class="math display">\[
+\begin{aligned}
+\frac{\Phi_i^{n+1}-\Phi_{i}^{n}}{\Delta
+t}=\frac{\Phi^n_{i+1}+\Phi^{n}_{i-1}-2\Phi_i^n}{h^2}+S^n
+\end{aligned}
+\]</span> <span class="math display">\[
+\Phi_i^{n+1}=\Phi_i^n+\frac{\Delta
+t}{h^2}(\Phi^n_{i+1}+\Phi_{i-1}^n-\Phi_i^n)+\Delta tS_i^n
+\]</span> 有时候可以用一个简写方法: <span class="math display">\[
+(\delta^2\Phi^n)_i=\Phi^n_{i+1}+\Phi^{n}_{i-1}-2\Phi_i^n
+\]</span> ##### 隐式差分法 <span class="math display">\[
+\begin{aligned}
+\frac{\Phi_i^{n+1}-\Phi_{i}^{n}}{\Delta
+t}=\frac{\Phi^{n+1}_{i+1}+\Phi^{n+1}_{i-1}-2\Phi_i^{n+1}}{h^2}+S^n_i
+\end{aligned}
+\]</span> 化简得到方程:( <span class="math inline">\(r=\frac{\Delta
+t}{h^2}\)</span> ) <span class="math display">\[
+-r\Phi_{i-1}^{n+1}+(1+2r)\Phi_i^{n+1}-r\Phi_{i+1}^{n+1}=\Phi_i^n+S_i^n\Delta
+t
+\]</span> 这样,如果知道了n对应的时间的分布(不同i对应的函数值),
+那么可以列线性方程组求解下一时刻的函数值。
+<strong>这个好像只适用于给定了第一类边界条件的情况</strong>。就是给定边界的函数值。
+如果给定了边界的值，假如说x方向分为了N+1个格点,
+第一个和最后一个格点的值已经知道了,那么可以列出一组线性方程。 <span
+class="math display">\[
+\begin{bmatrix}1+2r &amp; -r \\-r &amp; 1+2r&amp;-r\\
+...&amp;...&amp;...&amp;...&amp;...&amp;...\\...&amp;...&amp;...&amp;...&amp;...&amp;...\\...&amp;...&amp;...&amp;...&amp;-r&amp;1+2r\\
+\end{bmatrix}
+\begin{bmatrix}
+\Phi_1^{n+1}\\\Phi_2^{n+1}\\ ..\\.. \\\Phi_{N-1}^{n+1}
+\end{bmatrix}
+=
+\begin{bmatrix}
+\Phi^n_{1}+S_{1}^n\Delta t+r\Phi_0^{n+1}\\ \Phi^n_{2}+S_{2}^n\Delta t \\
+\\ \\ \Phi^n_{N-1}+S_{N-1}^n\Delta t+r\Phi_N^{n+1}
+\end{bmatrix}
+\]</span></p>
+<h5 id="平均隐式差分法crank-nicolson">平均隐式差分法Crank-Nicolson</h5>
+<p>类似于隐士差分法,将输运方程的空间二阶导项写为新旧时刻所得值的结合。
+<span class="math display">\[
+\begin{aligned}
+\frac{\Phi_i^{n+1}-\Phi_{i}^{n}}{\Delta
+t}=(\frac{1}{2}(\Phi^{n+1}_{i+1}+\Phi^{n+1}_{i-1}-2\Phi_i^{n+1})+\frac{1}{2}(\Phi^{n}_{i+1}+\Phi^{n}_{i-1}-2\Phi_i^{n}))\frac{1}{h^2}+S^n_i
+\end{aligned}
+\]</span> 类似于隐式差分,得到一组线性方程 <span class="math display">\[
+\begin{aligned}
+&amp;\begin{bmatrix}1+r &amp; -r/2 \\-r/2 &amp; 1+r&amp;-r/2\\
+...&amp;...&amp;...&amp;...&amp;...&amp;...\\...&amp;...&amp;...&amp;...&amp;...&amp;...\\...&amp;...&amp;...&amp;...&amp;-r/2&amp;1+r\\
+\end{bmatrix}
+\begin{bmatrix}
+\Phi_1^{n+1}\\\Phi_2^{n+1}\\ ..\\.. \\\Phi_{N-1}^{n+1}
+\end{bmatrix}
+\\&amp;\quad\quad=
+\begin{bmatrix}
+\frac{1}{2}r\Phi_0^n+(1-r)\Phi^n_{1}+\frac{1}{2}r\Phi_2^n+S_{1}^n\Delta
+t+\frac{r}{2}\Phi_0^{n+1}\\
+\frac{1}{2}r\Phi_1^n+(1-r)\Phi^n_{2}+\frac{1}{2}r\Phi_3^n+S_{2}^n\Delta
+t \\ \\ \\
+\frac{1}{2}r\Phi_{N-2}^n+(1-r)\Phi^n_{N-1}+\frac{1}{2}r\Phi_N^n+S_{N-1}^n\Delta
+t+\frac{r}{2}\Phi_N^{n+1}
+\end{bmatrix}
+\end{aligned}
+\]</span></p>
+<h5
+id="算符表示的平均隐式差分法crank-nicolson方法求解schrodinger方程">算符表示的平均隐式差分法(Crank-Nicolson)方法求解schrodinger方程</h5>
+<p>我们的schrodinger方程 <span class="math display">\[
+i\hbar\frac{\partial }{\partial
+t}\Phi=-\frac{\hbar^2}{2m}\nabla^2\Phi+V\Phi
+\]</span> 如果取常数<span class="math inline">\(\hbar=1,2m=1\)</span>
+定义算符 <span class="math display">\[
+H\Phi_i^n=-\frac{1}{h^2}(\Phi_{i+1}^n+\Phi_{i-1}^n-2\Phi_i^n)+V_i\Phi_i^n
+\]</span> Schrodinger方程可以写为(用了隐式差分法) <span
+class="math display">\[
+\frac{\Phi_i^{n+1}-\Phi_i^{n}}{\Delta
+t}=-i\frac{H}{2}\Phi^{n+1}_{i}-i\frac{H}{2}\Phi^n_{i}
+\]</span> 上面的式子可以写为 <span class="math display">\[
+\begin{aligned}
+\Phi_i^{n+1}&amp;=\frac{1-\frac{i}{2}H\Delta t}{1+\frac{i}{2}H\Delta
+t}\Phi_i^{n}\\
+\Phi_i^{n+1}&amp;=(\frac{2}{1+\frac{i}{2}H\Delta t}-1)\Phi_i^n
+\end{aligned}
+\]</span> 如果再定义一个辅助变量: <span class="math display">\[
+\chi_i^n=\frac{2}{1+\frac{i}{2}H\Delta t}\Phi_i^n
+\]</span> 则有方程 <span class="math display">\[
+\begin{aligned}
+\chi_{i-1}^n+(-2+i\frac{2h^2}{\Delta
+t}-h^2V_i)\chi_i^n+\chi_{i+1}^n=i\frac{4h^2}{\Delta t}\Phi_i^n
+\\
+\Phi_{i}^{n+1}=\chi_i^n-\Phi_i^n
+\end{aligned}
+\]</span> 辅助变量的边界条件定义为<span
+class="math inline">\(\chi_0=\chi_N=0\)</span> 。 辅助变量对应的方程组。
+<span class="math display">\[
+\begin{bmatrix}r_1 &amp; 1 \\1 &amp; r_2&amp;1\\
+...&amp;...&amp;...&amp;...&amp;...&amp;...\\...&amp;...&amp;...&amp;...&amp;...&amp;...\\...&amp;...&amp;...&amp;...&amp;1&amp;r_{N-1}\\
+\end{bmatrix}
+\begin{bmatrix}
+\chi_1^{n}\\\chi_2^{n}\\ ..\\.. \\\chi_{N-1}^{n}
+\end{bmatrix}
+=
+\begin{bmatrix}
+i\frac{4h^2}{\Delta t}\Phi_1^n-\chi_0^n\\ i\frac{4h^2}{\Delta
+t}\Phi_2^n\\..\\..\\ i\frac{4h^2}{\Delta t}\Phi_{N-1}^n-\chi_N^n
+\end{bmatrix}
+\]</span> ### 第六章分子动力学 #### Verlet算法
+算是分子动力学中的最核心的算法了吧。 有两种: * 速度verlet算法 *
+L.verlet算法 ##### L.verlet算法 牛顿第二定理 <span
+class="math display">\[
+\frac{d^2r}{dt^2}=\frac{F(t)}{m}
+\]</span> 利用三点法改写等式左端。同时速度用前后差分法来确定。 <span
+class="math display">\[
+\begin{aligned}
+\frac{r(t+h)+r(t-h)-2r(t)}{h^2}&amp;=F(t)/m\\
+r(t+h)&amp;=2r(t)-r(t-h)+h^2\frac{F(t)}{m}+O(h^4)\\
+P(t)&amp;=\frac{m}{2h}(r(t+h)-r(t-h))+O(h^2)
+\end{aligned}
+\]</span> 这种算法需要两个启动点,速度方面不需要启动点。 #####
+速度verlet算法 这个是最常用的verlet 算法。 利用匀加速运动的位移公式
+<span class="math display">\[
+\begin{aligned}
+r(t+h)=r(t)+hv(t)+\frac{h^2}{2}\frac{F(t)}{m}\\
+r(t-h)=r(t)-hv(t)+\frac{h^2}{2}\frac{F(t)}{m}
+\end{aligned}
+\]</span> 将第二个式子的时间向前推进h。 <span class="math display">\[
+r(t)=r(t+h)-hv(t+h)+\frac{h^2}{2}\frac{F(t+h)}{m}
+\]</span> 这个式子和第一个式子相加,可以得到速度的递推公式,
+同时坐标的地推公式就用简单的匀加速运动的公式。 <span
+class="math display">\[
+\begin{aligned}
+r(t+h)= r(t)+hv(t)+\frac{h^2}{2}\frac{F(t)}{m}\\
+v(t+h)=v(t)+h\frac{F(t)+F(t+h)}{2m}
+\end{aligned}
+\]</span> 上面的两个公式就是最常用的速度verlet算法。 #### 边界条件
+一般采用的是周期性边界条件,如果A是任意客观测量则周期边界条件的表达式为:
+<span class="math display">\[
+A(\vec{x})=A(\vec{x}+\vec{n}L)
+\]</span> #### 模拟流程 主要就是一点....对温度定义 <span
+class="math display">\[
+T= \frac{\bar{E_k}}{\frac{d}{2}Nk_B}
+\]</span></p>
+<h3 id="蒙特卡洛方法">蒙特卡洛方法</h3>
+<h4 id="蒙特卡洛方法算积分-重要抽样法">蒙特卡洛方法算积分,
+重要抽样法</h4>
+<p>考察积分,按照蒙特卡洛方法的思想,我们想随机抽取x，然后得到被积函数的抽样平均值认为这就是被积函数在这个区间上的平均值。
+由于f(x)的函数值随着x的变化起伏比较大, 会使得计算误差大。 <span
+class="math display">\[
+I = \int_0^xf(x&#39;)dx&#39;
+\]</span> 做变量代换 后的积分可以写为 <span class="math display">\[
+I = \int_0^x\frac{f(x&#39;)}{w(x&#39;)}w(x&#39;)dx&#39;
+\]</span> 如果取<span
+class="math inline">\(y(x)=\int_0^xw(x&#39;)dx&#39;\)</span>,并且要求<span
+class="math inline">\(\int_0^xw(x&#39;)dx&#39;=1\)</span> <span
+class="math display">\[
+I = \int_0^1\frac{f(x&#39;(y))}{w(x&#39;(y))}dy
+\]</span> 至此相当于对积分做了一次积分变换。 然后我们在<span
+class="math inline">\([0,1]\)</span>的区间抽取N个样本y, 把样本叫做<span
+class="math inline">\(y_i,y_i\in[0,1]\)</span>。则积分可以表示为 <span
+class="math display">\[
+I = \frac{1}{N} \Sigma_1^N \frac{f(x&#39;(y_i))}{w(x&#39;(y_i))}
+\]</span></p>
+<p>这个积分方法就叫做重要抽样法。
+<strong>解释这个方法为什么是对的</strong> ,这段话是定性的。
+当N很大是,可以看做<span class="math inline">\(y_i\)</span>在<span
+class="math inline">\([0,1]\)</span>上面均匀分布。在区间<span
+class="math inline">\(y\to y+dy\)</span>内, <span
+class="math inline">\(y_i\)</span>落入其中的概率(<strong>的期望</strong>)为<span
+class="math inline">\(\frac{dy}{1}\)</span>, 也就是说, 抽到应变量为<span
+class="math inline">\(\frac{f(x&#39;(y))}{w(x&#39;(y))}\)</span>,(<strong>严格来讲应该是<span
+class="math inline">\(\frac{f(x&#39;(y+\epsilon
+dy))}{w(x&#39;(y+\epsilon
+dy))}\)</span></strong>)的概率(<strong>的期望</strong>)为<span
+class="math inline">\(dy\)</span>。(<strong>求和化为积分的具体过程</strong>)那么,遍历整个积分区间<span
+class="math inline">\([0,1]\)</span>。积分是抽取到应变量的平均值也是积分值。</p>
+<h4
+id="重要抽样法的数值方法1差分方法">重要抽样法的数值方法1,差分方法</h4>
+<p>当我们选取的函数<span
+class="math inline">\(w(x)\)</span>不方便积分时, 重要抽样法就难以进行。
+在<span class="math inline">\([0,1]\)</span>的区间中选取<span
+class="math inline">\(M+1\)</span>个y点。可以表示为<span
+class="math inline">\(y^{i}=\frac{i}{M},i\in\{0,1...,M\}\)</span>。 由于
+<span class="math display">\[
+\frac{dy}{dx} = w(x)
+\]</span> 化简为差分方程 <span class="math display">\[
+\frac{y^{i+1}-y^{i}}{x^{i+1}-x^i}=w(x^i)
+\]</span> <span class="math display">\[
+x^{i+1}=x^i+\frac{1}{Mw(x^i)}
+\]</span> 利用上面的递推关系,结合起始点<span
+class="math inline">\(x^0=0\)</span>，可以得到<span
+class="math inline">\(x^i\)</span>的具体值。 <strong>当然,选取w(x)时,
+这里默认是保证了<span
+class="math inline">\(\int_0^xw(x&#39;)dx&#39;=1\)</span></strong></p>
+<h4
+id="蒙特卡洛方法的数值方法2-von_neumann-舍选法">蒙特卡洛方法的数值方法2,
+Von_Neumann 舍选法</h4>
+<p>我们想让抽取的x样本随x的分布按照<span
+class="math inline">\(w(x)\)</span>进行。选取函数<span
+class="math inline">\(w&#39;(x)\)</span>,满足<span
+class="math inline">\(w&#39;(x)&gt;w(x)\)</span>。 这个抽样这样进行: 1.
+在区间<span class="math inline">\([0,x]\)</span>中抽取随机数<span
+class="math inline">\(x_i\)</span> 2. 计算<span
+class="math inline">\(w&#39;(x_i)\)</span>和<span
+class="math inline">\(w(x_i)\)</span>。 3. 在区间<span
+class="math inline">\([0,1]\)</span>之间生成随机数<span
+class="math inline">\(\eta\)</span> 4. 比较<span
+class="math inline">\(\frac{w(x_i)}{w&#39;(x_i)}\)</span>和<span
+class="math inline">\(\eta\)</span> 5. 若<span
+class="math inline">\(\frac{w(x_i)}{w&#39;(x_i)}&gt;\eta\)</span>则这个<span
+class="math inline">\(x_i\)</span>保留, 否则再抽取下一个<span
+class="math inline">\(x_i\)</span> 实际操作时候<span
+class="math inline">\(w&#39;(x)=max_{x&#39;\in [0,x]} w(x&#39;)\)</span>
+是一个常数。 按照这个流程,保留下来的<span
+class="math inline">\(x_i\)</span>都倾向于集中在<span
+class="math inline">\(w(x_i)\)</span>大的地方。 <strong>当然,选取w(x)时,
+这里默认是保证了<span
+class="math inline">\(\int_0^xw(x&#39;)dx&#39;=1\)</span></strong></p>
+<h4 id="重要抽样法计算多维积分-metropolis方法">重要抽样法计算多维积分,
+metropolis方法</h4>
+<p>在多维空间中,这样选取随机点。 1. 确定空间中的重要性函数w(X)。 2.
+确定起始点<span class="math inline">\(X_0\)</span>,
+这个是一个列向量,或者说是一个坐标 3. 下一步<span
+class="math inline">\(X_{i+1}=X_i+\delta_r\)</span>。 其中<span
+class="math inline">\(\delta_r\)</span>是指对于X的每一个坐标都变化一个在<span
+class="math inline">\([-\delta,\delta]\)</span>中的随机数。 4. 在<span
+class="math inline">\([0,1]\)</span>中选取一个随机数 <span
+class="math inline">\(\eta\)</span>, 如果<span
+class="math inline">\(\frac{w(X_{i+1})}{w(X_i)}&gt;\eta\)</span>则保留<span
+class="math inline">\(X_{i+1}\)</span>。否则<span
+class="math inline">\(X_{i+1}=X_i\)</span>
+按照这个方法选取的随机数会倾向于到<span
+class="math inline">\(w(X)\)</span>大的地方去。 <strong>当然,选取w(x)时,
+这里默认是保证了<span
+class="math inline">\(\int_0^xw(x&#39;)dx&#39;=1\)</span></strong> *
+一个metropolis方法的例子(matlab) 是老师写的程序,
+这个程序考察了规定重要性<span
+class="math inline">\(w(x)=\frac{6}{5}(1-\frac{1}{2}x^2)\)</span>
+。第一个点取的是<span class="math inline">\(x=0.9\)</span>,
+然后将随机取得点的分布画出来和<span
+class="math inline">\(w(x)\)</span>进行对比。
+但是实际上这个程序没有体现出metropolis方法中的"行走"。
+fxt同学的代码是这样处理行走中的边界问题的。(见下一段代码),对游走的点分了类，边界的点有相应的游走步长。
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">function metropolis_2</span><br><span class="line">clear all</span><br><span class="line">close all</span><br><span class="line">clc</span><br><span class="line"></span><br><span class="line"><span class="attribute">x1</span>=0.9;</span><br><span class="line"><span class="attribute">delta</span>=5.5;</span><br><span class="line"><span class="attribute">w</span>=@(x1) 6/5*(1-0.5*x1.^2); %概率密度函数，与例题8相同</span><br><span class="line"></span><br><span class="line"><span class="attribute">n</span>=0;</span><br><span class="line"><span class="attribute">N</span>=5e5;</span><br><span class="line"><span class="keyword">for</span> <span class="attribute">i</span>=1:N</span><br><span class="line">    [x1]=my_metropolis(x1,delta,w);</span><br><span class="line">    <span class="attribute">n</span>=n+1;</span><br><span class="line">    xx(n)=x1; %将经历的x1值存储起来 </span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">%下面的程序判断metropolis算法生成的随机数分布是否符合分布函数</span><br><span class="line">%========================================================</span><br><span class="line"><span class="attribute">Num</span>=201;                                                %区间大小</span><br><span class="line"><span class="attribute">Max</span>=max(abs(xx))+10^-9                    %边界</span><br><span class="line"><span class="attribute">Min</span>=min(xx)*1.0                      %边界</span><br><span class="line"><span class="attribute">y</span>=zeros(1,Num);</span><br><span class="line"><span class="attribute">x</span>=linspace(Min,Max,Num);</span><br><span class="line"><span class="attribute">h</span>=x(2)-x(1);</span><br><span class="line"><span class="keyword">for</span> <span class="attribute">i</span>=1:length(xx)</span><br><span class="line">    <span class="attribute">index</span>=fix((xx(i)-Min)/h)+1; %判定xx(i)处于哪个子区间，fix为舍去小数取整运算</span><br><span class="line">    y(index)=y(index)+1;          %该子区间的随机数数目+1</span><br><span class="line">end</span><br><span class="line"><span class="attribute">f</span>=@(x1) 6/5*(1-0.5*x1.^2);            %精确值绘图</span><br><span class="line">figure,fplot(f,[Min,Max],<span class="string">&#x27;r&#x27;</span>);</span><br><span class="line">hold on;</span><br><span class="line"><span class="attribute">S</span>=interg(Min,Max,f)</span><br><span class="line"><span class="attribute">y</span>=y/length(xx)/h*S;  %生成的随机数的数目为n(length(xx))，走的总步数为N</span><br><span class="line">plot(x(1:Num-1),y(1:Num-1),<span class="string">&#x27;-*&#x27;</span>);title(<span class="string">&#x27;验证随机数的分布&#x27;</span>);</span><br><span class="line">legend(<span class="string">&#x27;精确分布&#x27;</span>,<span class="string">&#x27;随机数的分布&#x27;</span>)</span><br><span class="line">hold off</span><br><span class="line"></span><br><span class="line">function <span class="attribute">S</span>=interg(a,b,w) %w函数在[a,b]上的积分 </span><br><span class="line">    <span class="attribute">n</span>=10000;</span><br><span class="line">    h=(b-a)/n;</span><br><span class="line">    <span class="attribute">xx_h</span>=a:h:b;</span><br><span class="line">    <span class="attribute">ww</span>=w(xx_h);</span><br><span class="line">    %<span class="attribute">S</span>=sum(w(xx_h).*(b-a)/n)-w(a)*(b-a)/2/n-w(b)*(b-a)/2/n; %梯形算法</span><br><span class="line">    S=(4*sum(ww(2:2:n))+2*sum(ww(3:2:n-1))+ww(1)+ww(n+1))*h/3; %simpson积分公式</span><br><span class="line">%=========================================================================</span><br><span class="line"></span><br><span class="line">function [x1] = my_metropolis(x1,delta,w)</span><br><span class="line"><span class="attribute">x1t</span>=rand; %[0,1]区间产生随机数</span><br><span class="line"><span class="attribute">r</span>=w(x1t)/w(x1);</span><br><span class="line"><span class="keyword">if</span> rand&lt;r;</span><br><span class="line">   <span class="attribute">x1</span>=x1t;    </span><br><span class="line">end</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[xnew,typenew]</span> = <span class="title">MH</span><span class="params">(x,delta,type,w)</span></span></span><br><span class="line"><span class="comment">% Metropolis Hastings Algorithm</span></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">type</span> == <span class="number">1</span></span><br><span class="line">    xnew = <span class="number">2</span>*delta*<span class="built_in">rand</span> + <span class="number">1</span><span class="number">-2</span>*delta; <span class="comment">% 对于第1类坐标,在[1-2δ,1]均匀分布中选取下一个点</span></span><br><span class="line"><span class="keyword">elseif</span> <span class="built_in">type</span> == <span class="number">2</span></span><br><span class="line">    xnew = <span class="number">2</span>*delta*<span class="built_in">rand</span>; <span class="comment">% 对于第2类坐标,在[0,2δ]均匀分布中选取下一个点</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    xnew = x + delta*(<span class="number">2</span>*<span class="built_in">rand</span><span class="number">-1</span>); <span class="comment">% 对于第3类坐标,在[x-δ,x+δ]均匀分布中选取下一个点</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">typenew = categorize(xnew,delta); <span class="comment">% 记录新点的类型和概率密度</span></span><br><span class="line">r = w(xnew)/w(x);</span><br><span class="line"><span class="keyword">if</span>  <span class="built_in">rand</span> &gt; r</span><br><span class="line">    xnew = x;</span><br><span class="line">    typenew = <span class="built_in">type</span>;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">type</span> = <span class="title">categorize</span><span class="params">(x,delta)</span></span></span><br><span class="line"><span class="comment">% 随机游走者所处位置的分类</span></span><br><span class="line"><span class="keyword">if</span> x+delta &gt; <span class="number">1</span></span><br><span class="line">    <span class="built_in">type</span> = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">elseif</span> x-delta &lt; <span class="number">0</span></span><br><span class="line">    <span class="built_in">type</span> = <span class="number">2</span>;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    <span class="built_in">type</span> = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h4 id="蒙特卡洛方法计算ising-模型">蒙特卡洛方法计算Ising 模型</h4>
+<ul>
+<li>简单介绍Ising模型 二维Ising模型就是一个<span
+class="math inline">\(N_x\times
+N_y=N\)</span>的格点每一个格点上面都有一个自旋, 记为<span
+class="math inline">\(S_{i,j}\)</span> 系统有一个哈密顿量可以写为<span
+class="math inline">\(H = -J\Sigma_{&lt;\alpha
+\beta&gt;}S_{\alpha}S_{\beta}-B\Sigma_{\alpha}S_{\alpha}\)</span>
+上面的式子中,<span class="math inline">\(&lt;\alpha
+\beta&gt;\)</span>指的是对所有相邻的连线求和。当然就此可以引入两种边界条件
+(周期边界条件, 螺旋边界条件) 一个分布的权重(重要性)<span
+class="math inline">\(w(S)=\frac{e^{-H(S)}}{Z}\)</span>,其中<span
+class="math inline">\(Z = \Sigma e^{-H(S)}\)</span> 。 二维Ising
+模型经过计算可以得到物理量和统计学期望之间的关系。 <span
+class="math display">\[
+\begin{aligned}
+M &amp;= &lt;\Sigma_{\alpha = 1}^N S_{\alpha}&gt;\\
+\chi &amp;= &lt;\Sigma_{\alpha = 1}^N
+S_{\alpha}^2&gt;-&lt;\Sigma_{\alpha = 1}^N S_{\alpha}&gt;^2\\
+E &amp;= &lt;H(S)&gt;\\
+C_B &amp;= &lt;H^2&gt;-&lt;H&gt;^2
+\end{aligned}
+\]</span></li>
+</ul>
+<p>Ising 模型用metropolis方法的具体操作 1. 选择一个初始的S的分布(构型)
+2. 选择一个格点{i,j}。 3. 改变{i,j}上的自旋(使他反号) 4.
+计算改变后的系统能量<span
+class="math inline">\(H&#39;=H+(2Jf+B)S_{\alpha}\)</span>
+,则改变前后的的权重比值可以写为<span
+class="math inline">\(r=\frac{w(S&#39;)}{w(S)}=e^{-S_{\alpha}(2Jf+B)}\)</span>,
+其中<span class="math inline">\(f =
+(S_{i-1,j}+S_{i+1,j}+S_{i,j+1},S_{i,j-1})\)</span>
+。实际上f只能有5个可以取得值(从-4到4,间隔2取值),然后<span
+class="math inline">\(S_{\alpha}\)</span>也只有两个可以取的值，综合来看,
+r只有十个值，将这十个值提前存储在列表里面可以节省计算时间。 5. 从<span
+class="math inline">\([0,1]\)</span>区间里面取值<span
+class="math inline">\(\eta\)</span>,如果<span
+class="math inline">\(\eta&lt;r\)</span>,则认为变化后的分布<span
+class="math inline">\(S_{i+1}\)</span>就是<span
+class="math inline">\(S_i\)</span>翻转了一个自旋；如果<span
+class="math inline">\(\eta&gt; r\)</span>, 则认为<span
+class="math inline">\(S_{i+1}\)</span>就是<span
+class="math inline">\(S_i\)</span>。 6.
+在进行了很多步之后就可以开始计算物理量了。</p>
+<ul>
+<li>下面是Ising模型的例子,
+选择格子在水平和竖直方向上的大小都为50，耦合强度和外磁场强度分别为J=0.3，
+B=0.热化扫描50次（此时不计算可观测量），数据分成10个小组，每组50个样本，每个样本的抽样间隔为5.
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br></pre></td><td class="code"><pre><span class="line">function Exapmple_Ising_model</span><br><span class="line">clear all</span><br><span class="line">close all</span><br><span class="line">clc</span><br><span class="line"></span><br><span class="line"><span class="attribute">NX</span>=6;NY=6; %格子尺寸</span><br><span class="line">J=[0.0:0.05:0.3,0.305:0.005:0.605,0.61:0.05:0.92]; </span><br><span class="line">%耦合强度，并不等间隔的原因是为了加强0.3-0.6段的计算</span><br><span class="line"><span class="attribute">B</span>=0.0;  %外磁场强度</span><br><span class="line"></span><br><span class="line"><span class="attribute">N_therm</span>=50; %热化扫描步数</span><br><span class="line"><span class="attribute">N_group</span>=10; %数据分组数目</span><br><span class="line"><span class="attribute">N_size</span>=50;   %每组样本数</span><br><span class="line"><span class="attribute">N_freq</span>=5;   %抽样间隔步数</span><br><span class="line"></span><br><span class="line"><span class="attribute">S</span>=zeros(NX,NY);</span><br><span class="line">[N,S]=initialize(NX,NY); %初始化格子的自旋</span><br><span class="line"><span class="attribute">S1</span>=S</span><br><span class="line"><span class="keyword">for</span> <span class="attribute">iii</span>=1:length(J)</span><br><span class="line">    <span class="attribute">JJ</span>=J(iii); %依次取不同的J值,即不同的耦合强度</span><br><span class="line">    <span class="attribute">R</span>=zeros(5,2); %R数组用于存放接受概率值，有10个矩阵元，即PPT中的(2)式</span><br><span class="line">    <span class="attribute">R</span>=flip_probs(JJ,B);% %初始化R数组</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> <span class="attribute">i</span>=1:N_therm %做热化扫描</span><br><span class="line">        [S,accept]=thermal_sweep(NX,NY,S,R);</span><br><span class="line">         %accept/N   %反转操作接受率</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">    <span class="attribute">S2</span>=S;</span><br><span class="line">    <span class="attribute">Sum_M</span>=0; <span class="attribute">Sum_M2</span>=0; <span class="attribute">Sum_SigM</span>=0; %初始化待求物理量M, E，Chi，CB</span><br><span class="line">    <span class="attribute">Sum_E</span>=0; <span class="attribute">Sum_E2</span>=0; <span class="attribute">Sum_SigE</span>=0;</span><br><span class="line">    <span class="attribute">Sum_Chi</span>=0; <span class="attribute">Sum_Chi2</span>=0;</span><br><span class="line">    <span class="attribute">Sum_CB</span>=0; <span class="attribute">Sum_CB2</span>=0;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> <span class="attribute">igroup</span>=1:N_group</span><br><span class="line">        <span class="attribute">Group_M</span>=0; <span class="attribute">Group_M2</span>=0;</span><br><span class="line">        <span class="attribute">Group_E</span>=0; <span class="attribute">Group_E2</span>=0;</span><br><span class="line">        <span class="keyword">for</span> <span class="attribute">sweep</span>=1:N_size*N_freq  %完成此轮循环，就完成了一组数值的计算</span><br><span class="line">            [S,accept]=thermal_sweep(NX,NY,S,R); %抽样前，先做热化扫描</span><br><span class="line">            %accept/N   %反转操作接受率</span><br><span class="line">            <span class="keyword">if</span> mod(sweep,N_freq)==0</span><br><span class="line">                [Magic,Energy]=Magic_Energy(B,JJ,NX,NY,S); %求出一种情况下的磁化强度和能量E</span><br><span class="line">                %一次抽样，获得M和E</span><br><span class="line">                <span class="attribute">Group_M</span>=Group_M+Magic;</span><br><span class="line">                <span class="attribute">Group_M2</span>=Group_M2+Magic^2;</span><br><span class="line">                <span class="attribute">Group_E</span>=Group_E+Energy;</span><br><span class="line">                <span class="attribute">Group_E2</span>=Group_E2+Energy^2;</span><br><span class="line">            end</span><br><span class="line">        end</span><br><span class="line">    %===================================</span><br><span class="line">        <span class="attribute">Group_M</span>=Group_M/N_size; %组内抽样的平均，即期望值，PPT中的（1）式，教材中的(8.21a)</span><br><span class="line">        <span class="attribute">Group_M2</span>=Group_M2/N_size;</span><br><span class="line">        <span class="attribute">Group_E</span>=Group_E/N_size;</span><br><span class="line">        <span class="attribute">Group_E2</span>=Group_E2/N_size;</span><br><span class="line">        <span class="attribute">Chi</span>=Group_M2-Group_M^2; %(8.21b),一个组里面求得的磁化率</span><br><span class="line">        <span class="attribute">CB</span>=Group_E2-Group_E^2;  %(8.21d)</span><br><span class="line"></span><br><span class="line">        <span class="attribute">Sum_M</span>=Sum_M+Group_M;</span><br><span class="line">        <span class="attribute">Sum_E</span>=Sum_E+Group_E;</span><br><span class="line">        <span class="attribute">Sum_Chi</span>=Sum_Chi+Chi;</span><br><span class="line">        <span class="attribute">Sum_CB</span>=Sum_CB+CB;</span><br><span class="line">    end</span><br><span class="line">    <span class="attribute">E</span>=Sum_E/N_group;</span><br><span class="line">    <span class="attribute">M</span>=Sum_M/N_group;</span><br><span class="line">    <span class="attribute">Chi</span>=Sum_Chi/N_group;         %几个组求得的磁化率的平均</span><br><span class="line">    <span class="attribute">CB</span>=Sum_CB/N_group;</span><br><span class="line"></span><br><span class="line">    CBB(iii)=CB; %用于存储不同J值对应的CB比热容</span><br><span class="line">    EE(iii)=E/N; %N为总格子数</span><br><span class="line">    MM(iii)=M/N;</span><br><span class="line">    Chi_1(iii)=Chi/N;</span><br><span class="line"></span><br><span class="line">end   %对应于<span class="keyword">for</span> <span class="attribute">iii</span>=1:length(J)</span><br><span class="line"> figure;plot(1./J,CBB,<span class="string">&#x27;r*-&#x27;</span>) %注意：由于1/0为无穷大，程序没有画出该点</span><br><span class="line"> title(<span class="string">&#x27;比热随耦合强度的倒数的变化关系&#x27;</span>)</span><br><span class="line"> xlabel(<span class="string">&#x27;1/J&#x27;</span>); ylabel(<span class="string">&#x27;C_B&#x27;</span>);</span><br><span class="line"> figure;plot(1./J,EE,<span class="string">&#x27;b&#x27;</span>)       %J值大，意味着温度低，M值大</span><br><span class="line"> title(<span class="string">&#x27;能量随耦合强度的倒数的变化关系&#x27;</span>)</span><br><span class="line"> xlabel(<span class="string">&#x27;1/J&#x27;</span>); ylabel(<span class="string">&#x27;能量E&#x27;</span>);</span><br><span class="line"> figure;plot(1./J,MM,<span class="string">&#x27;r&#x27;</span>) %注意，磁化强度可以朝不同方向，因此可以为负</span><br><span class="line"> title(<span class="string">&#x27;磁化强度随耦合强度的倒数的变化关系&#x27;</span>)</span><br><span class="line"> xlabel(<span class="string">&#x27;1/J&#x27;</span>); ylabel(<span class="string">&#x27;磁化强度M&#x27;</span>);</span><br><span class="line"> figure;plot(1./J,Chi_1,<span class="string">&#x27;k&#x27;</span>)</span><br><span class="line"> title(<span class="string">&#x27;磁化率随耦合强度的倒数的变化关系&#x27;</span>)</span><br><span class="line"> xlabel(<span class="string">&#x27;1/J&#x27;</span>); ylabel(<span class="string">&#x27;磁化率Chi&#x27;</span>);</span><br><span class="line"> S</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">function [N,S]=initialize(NX,NY)   %初始化每个格子的自旋</span><br><span class="line"><span class="attribute">N</span>=NX*NY;</span><br><span class="line"><span class="keyword">for</span> <span class="attribute">i</span>=1:NY</span><br><span class="line">    <span class="keyword">for</span> <span class="attribute">j</span>=1:NX</span><br><span class="line">        <span class="keyword">if</span> rand &lt; 0.5</span><br><span class="line">            S(i,j)=1;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            S(i,j)=-1;</span><br><span class="line">        end</span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">function [Magic,Energy]=Magic_Energy(B,JJ,NX,NY,S)  %求出一种情况下的磁化强度和能量E</span><br><span class="line"><span class="attribute">Magic</span>=0;</span><br><span class="line"><span class="attribute">Sum_ss</span>=0;</span><br><span class="line"><span class="keyword">for</span> <span class="attribute">i</span>=1:NY</span><br><span class="line">    <span class="keyword">if</span> i&gt;1</span><br><span class="line">        <span class="attribute">IM</span>=i-1;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="attribute">IM</span>=NY;</span><br><span class="line">    end</span><br><span class="line">    %====================</span><br><span class="line">    <span class="keyword">for</span> <span class="attribute">j</span>=1:NX</span><br><span class="line">        <span class="keyword">if</span> j&gt;1</span><br><span class="line">            <span class="attribute">JM</span>=j-1;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="attribute">JM</span>=NX;</span><br><span class="line">        end</span><br><span class="line">        %==================</span><br><span class="line">        <span class="attribute">Magic</span>=Magic+S(i,j);</span><br><span class="line">        <span class="attribute">Sum_ss</span>=Sum_ss+S(i,j)*(S(IM,j)+S(i,JM)); </span><br><span class="line">        %注意上式求和实际上是进行(8.18)式第一项的运算，但S(i,j)只与左格点和上格点相乘求和</span><br><span class="line">        %是因为如果上下左右四个格点都相乘求和，则存在重复计算的现象</span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"><span class="attribute">Energy</span>=-JJ*Sum_ss-B*Magic; %(8.18)式</span><br><span class="line">        </span><br><span class="line">function <span class="attribute">R</span>=flip_probs(JJ,B) %设定翻转判定矩阵</span><br><span class="line"><span class="keyword">for</span> <span class="attribute">i</span>=1:5</span><br><span class="line">    R(i,2)=exp(-2*(JJ*(2*i-6)+B));  %Sa为1</span><br><span class="line">    %自旋反转判定因子，page 147页的（8.23）式，PPT中的（2）式，R(:,2)代表中心点自旋向上</span><br><span class="line">    R(i,1)=exp(2*(JJ*(2*i-6)+B)); %分别对应于<span class="attribute">f</span>=-4，-2, 0, 2, 4</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">function [S,accept]=thermal_sweep(NX,NY,S,R)   </span><br><span class="line">%热化扫描函数，每次热化扫描后，所有的点都被遍历一次</span><br><span class="line"><span class="attribute">accept</span>=0;</span><br><span class="line"><span class="keyword">for</span> <span class="attribute">i</span>=1:NY</span><br><span class="line">    <span class="keyword">if</span> i&lt;NY         %采用周期性边界条件，此<span class="keyword">if</span>循环给定(i,j)粒子下面的相邻格点（i+1,j）</span><br><span class="line">        <span class="attribute">IP</span>=i+1;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="attribute">IP</span>=1;</span><br><span class="line">    end</span><br><span class="line">    <span class="keyword">if</span> i&gt;1         %采用周期性边界条件，此<span class="keyword">if</span>循环给定(i,j)粒子上面的相邻格点（i-1,j）</span><br><span class="line">        <span class="attribute">IM</span>=i-1;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="attribute">IM</span>=NY;</span><br><span class="line">    end</span><br><span class="line">    %==================</span><br><span class="line">    <span class="keyword">for</span> <span class="attribute">j</span>=1:NX</span><br><span class="line">        <span class="keyword">if</span> j&lt;NX %采用周期性边界条件，此<span class="keyword">if</span>循环给定(i,j)粒子右边的相邻格点（i,j+1）</span><br><span class="line">            <span class="attribute">JP</span>=j+1;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="attribute">JP</span>=1;</span><br><span class="line">        end</span><br><span class="line">        <span class="keyword">if</span> j&gt;1 %采用周期性边界条件，此<span class="keyword">if</span>循环给定(i,j)粒子左边的相邻格点（i,j-1）</span><br><span class="line">            <span class="attribute">JM</span>=j-1;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="attribute">JM</span>=NX;</span><br><span class="line">        end</span><br><span class="line">        %==================</span><br><span class="line">        <span class="attribute">spin</span>=S(i,j);     </span><br><span class="line">        <span class="attribute">f</span>=S(IP,j)+S(IM,j)+S(i,JP)+S(i,JM);</span><br><span class="line">        <span class="keyword">if</span> rand&gt;R(3+f/2,(3+spin)/2) %如果反转概率比随机数小，则不反转</span><br><span class="line">            %注意：f的取值只有-4，-2,0,2,4五种，spin只有-1,1两种，</span><br><span class="line">            %因此用R（5,2）二维数组即可以判定是否反转</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            S(i,j)=-spin;  %反转(i,j)点的自旋</span><br><span class="line">            <span class="attribute">accept</span>=accept+1;</span><br><span class="line">        end</span><br><span class="line">    end</span><br><span class="line">end</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="典型的例子">典型的例子</h3>
+<p>在作业文件夹中有一个"自定义函数"的子文件夹,里面有很多实用的,
+暂时没有搬到笔记里面来。</p>
+<h4 id="rk算法">4-RK算法</h4>
+<p>写了一个函数文件,可以以后调用。 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%这里是想写一个给定初态,分段,分段数目,函数迭代表达式,就可以返回函数自变量和因变量。</span></span><br><span class="line"><span class="comment">%f,可以是多因变量的,但是目前只支持单自变量。f的定义格式可以是f = @(x,y)[dy1/dx(x,y)  ,dy2/dx(x,y) ...]</span></span><br><span class="line"><span class="comment">%y 是因变量,这里要写成行变量的形式。[y1,y2...]</span></span><br><span class="line"><span class="comment">%x_start是x的起始点</span></span><br><span class="line"><span class="comment">%x_end是x的终止点</span></span><br><span class="line"><span class="comment">%n 是分段的数目,相当于自变量列表的数目是n+1</span></span><br><span class="line"><span class="comment">%支持倒序解</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[x,y]</span>= <span class="title">RK_solution</span><span class="params">(x_start,x_end,y_start,n,f)</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    h=(x_end-x_start)/n;</span><br><span class="line">    x=x_start:h:x_end;</span><br><span class="line"></span><br><span class="line">    <span class="comment">%通过这个变量(length)得到函数的因变量。  </span></span><br><span class="line">    <span class="built_in">length</span> = <span class="built_in">size</span>(y_start,<span class="number">2</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">%将因变量定义为元素为0的矩阵。</span></span><br><span class="line">    y = <span class="built_in">zeros</span>(n+<span class="number">1</span>,<span class="built_in">length</span>);</span><br><span class="line">    <span class="comment">%将函数因变量的第一行写为初态。</span></span><br><span class="line">    y(<span class="number">1</span>,:)=y_start;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">%利用R-K算法迭代</span></span><br><span class="line">    <span class="keyword">for</span> <span class="built_in">i</span> = <span class="number">1</span>:<span class="number">1</span>:n</span><br><span class="line">        xn=x(<span class="built_in">i</span>);</span><br><span class="line">        yn=y(<span class="built_in">i</span>,:);</span><br><span class="line">    </span><br><span class="line">        K1 = f(xn,yn);</span><br><span class="line">        K2 = f(xn+h/<span class="number">2</span>,yn+h/<span class="number">2.</span>*K1);</span><br><span class="line">        K3= f(xn+h/<span class="number">2</span>,yn+h/<span class="number">2.</span>*K2);</span><br><span class="line">        K4= f(xn+h,yn+h.*K3);</span><br><span class="line">        </span><br><span class="line">        y(<span class="built_in">i</span>+<span class="number">1</span>,:)=yn+h/<span class="number">6.</span>*(K1+<span class="number">2.</span>*K2+<span class="number">2.</span>*K3+K4);</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="simpson38积分法">Simpson38积分法</h4>
+<figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">% 定义simpson38算法的积分,算法可以做到给定函数和自变量数组就可以,需要注意的是x中的元素个数一定要是。<span class="number">3</span>的倍数+<span class="number">1</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">I_simpson38</span> = <span class="title">simpson38</span><span class="params">(x,f1)</span></span></span><br><span class="line"><span class="function">    <span class="title">I_simpson38</span>=3/8*<span class="title">abs</span><span class="params">(x(2)</span>-<span class="title">x</span><span class="params">(1)</span>)*<span class="params">(f1(1)</span>+3*<span class="title">sum</span><span class="params">(f1(2:3:<span class="keyword">end</span>-2)</span>)+3*<span class="title">sum</span><span class="params">(f1(3:3:<span class="keyword">end</span>-1)</span>)+2*<span class="title">sum</span><span class="params">(f1(4:3:<span class="keyword">end</span>-3)</span>)+<span class="title">f1</span><span class="params">(<span class="keyword">end</span>)</span>);</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h4 id="简单搜索发结合二分法">简单搜索发结合二分法</h4>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">% 定义一个二分法结合简单搜索发寻找哦函数f从xstart到xend之间所有的根,并且寻找到的根的数目可以自定义为nmax.</span><br><span class="line">%搜索法的起始搜索步长设定为h。</span><br><span class="line">% xstart表示开始寻找的x值,xend表示最终搜索的x值,h表示搜索步长,f表示需要求根的函数,delta和<span class="built_in">epsilon</span>都表示误差。</span><br><span class="line"><span class="function"><span class="keyword">function</span></span> positions = finding(xstart,xend,nmax,f,delta,<span class="built_in">epsilon</span>,h)</span><br><span class="line">    positions = [];</span><br><span class="line">    <span class="keyword">number</span> = <span class="built_in">size</span>(positions,<span class="number">2</span>);</span><br><span class="line">    x0 = xstart;</span><br><span class="line">    h1 = h;</span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">number</span> &lt; nmax &amp; x0 &lt; xend</span><br><span class="line">        h = h1;</span><br><span class="line">        <span class="keyword">while</span> <span class="built_in">abs</span>(f(x0)) &gt; delta | <span class="built_in">abs</span>(h) &gt; <span class="built_in">epsilon</span></span><br><span class="line">                        </span><br><span class="line">            <span class="keyword">if</span> f(x0)*f(x0+h)&gt;<span class="number">0</span></span><br><span class="line">                x0 = x0 + h;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                h = h/<span class="number">2</span>;</span><br><span class="line">            <span class="keyword">end</span></span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">position</span> = [x0];</span><br><span class="line">        positions = [positions,<span class="keyword">position</span>];</span><br><span class="line">        <span class="keyword">number</span> = <span class="built_in">size</span>(positions,<span class="number">2</span>);</span><br><span class="line">        x0 = x0 + h1;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h4 id="薛定谔方程的本征值问题">薛定谔方程的本征值问题</h4>
+<p><strong>[[计算物理#求解薛定谔方程的本征值问题|前面章节讲到的打靶法]]</strong></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%[energy,x,y] = find_energy(x_min,x_max,h,v,gamma,n,delta,delta_judge,epsilon,e_start,e_end,e_max,y1a,y1b)</span></span><br><span class="line"><span class="comment">%定义了一个函数叫做&quot;find_energy&quot;,他的作用是求解schrodinger方程的本征值问题。下面解释各个输入参数的意思。</span></span><br><span class="line"><span class="comment">%--------输入</span></span><br><span class="line"><span class="comment">%x_min,x_max分别表示求解薛定谔方程的区间,</span></span><br><span class="line"><span class="comment">%h表示初始的搜索步长(用于简单搜索法和二分法的结合)。h在这个算法中既是寻找xm的搜索步长,也是寻找能量本征值的搜索步长。</span></span><br><span class="line"><span class="comment">%v是定义的势能函数</span></span><br><span class="line"><span class="comment">% gamma是薛定谔方程无量纲化后的系数</span></span><br><span class="line"><span class="comment">%n是解薛定谔方程(从xmin到xm,和从xm到xmax)时的分段个数(注意分段个数一定是3的倍数(n是3的倍数);这是因为用了simson38算法)</span></span><br><span class="line"><span class="comment">%delta,epsilon 是二分法的delta,epsilon</span></span><br><span class="line"><span class="comment">%delta_judge是判断是否为阶跃点的判断标准!!!!!!!--------这个比较关键,因为这个关系到跳跃函数间断点。这个系数取的过小会漏掉一些本征值,取得过的大会增加计算时间。一般取8-100。</span></span><br><span class="line"><span class="comment">%e_start是寻找能量本征值的起点</span></span><br><span class="line"><span class="comment">%e_end是寻找能量本征值的终点(找到这个能量就停止)</span></span><br><span class="line"><span class="comment">%e_max是寻找能量本征值的最大数目(找到这个数目就停止)</span></span><br><span class="line"><span class="comment">%y1a,y1b是该算法中在xmin和xmax处薛定谔方程的初态,用列表的形式给出。详细见RK_solution 函数</span></span><br><span class="line"><span class="comment">%--------输出</span></span><br><span class="line"><span class="comment">%energy是一个行向量,从左到右,从小到大输出能量本征值</span></span><br><span class="line"><span class="comment">%x是一个列表,第i行是第i个本征值对应的本征态。</span></span><br><span class="line"><span class="comment">%y是一个列表,第i行是第i个本征值对应的本征态</span></span><br><span class="line"><span class="comment">%--------这个函数中引用了其它函数</span></span><br><span class="line"><span class="comment">%finding 是二分法结合简单搜索法的函数</span></span><br><span class="line"><span class="comment">%RK-Solution是用4-RK算法求解方程的函数。</span></span><br><span class="line"><span class="comment">%simpson38是辛普森3/8积分算法</span></span><br><span class="line"><span class="comment">% --------输入的例子</span></span><br><span class="line"><span class="comment">%下面的输入意味着在(-4,4)区间上,gamma是sqrt(50)，解势能函数为v(x)，的薛定谔方程,并且我们考察前六个能量本征值,最大的能量本征值不超过6。</span></span><br><span class="line"><span class="comment">%按照这个例子,会解出能量本征值和归一化的本征态,并且画出各个本征态的波函数。</span></span><br><span class="line"><span class="comment">%v = @(x)1/2.*x.^2-1</span></span><br><span class="line"><span class="comment">%[energy,x,y]=find_energy(-4,4,0.01,v,sqrt(50),300,0.01,50,0.01,-0.9990,6,6,[0,0.1],[0,0.1])</span></span><br><span class="line"><span class="comment">%number = size(energy,2)</span></span><br><span class="line"><span class="comment">%for i = 1:1:number</span></span><br><span class="line"><span class="comment">%    figure;</span></span><br><span class="line"><span class="comment">%    plot(x(i,:),y(i,:),&#x27;r&#x27;)</span></span><br><span class="line"><span class="comment">%end</span></span><br><span class="line"><span class="comment">%plot(x(1,:),v(x(1,:)))</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[energy,x,y]</span> = <span class="title">find_energy</span><span class="params">(x_min,x_max,h,v,gamma,n,delta,delta_judge,epsilon,e_start,e_end,e_max,y1a,y1b)</span></span></span><br><span class="line">   </span><br><span class="line">    energy = [];</span><br><span class="line">    x = [];</span><br><span class="line">    y = [];</span><br><span class="line">    number = <span class="built_in">size</span>(energy,<span class="number">2</span>);</span><br><span class="line">    e0 = e_start;</span><br><span class="line">    h1 = h;</span><br><span class="line">    delta1 = delta;</span><br><span class="line">    <span class="keyword">while</span> number &lt; e_max &amp;&amp; e0&lt; e_end</span><br><span class="line">        count = <span class="number">0</span>;</span><br><span class="line">        h1 = h;</span><br><span class="line">        delta1 = delta;</span><br><span class="line">        delta_judge1 = delta_judge;</span><br><span class="line">        [x0,y0,judge0]= solution_function(x_min,x_max,e0);</span><br><span class="line">        <span class="keyword">while</span> (<span class="built_in">abs</span>(judge0) &gt; delta1 | <span class="built_in">abs</span>(h1) &gt; epsilon ) &amp; e0 &lt; e_end</span><br><span class="line">            [x0,y0,judge0]= solution_function(x_min,x_max,e0);</span><br><span class="line">            [x1,y1,judge1]= solution_function(x_min,x_max,e0+h1);                        </span><br><span class="line">            judge1;</span><br><span class="line">            <span class="keyword">if</span> count &gt; <span class="number">1</span> &amp; <span class="built_in">abs</span>(judge1)&gt; delta_judge1</span><br><span class="line">                e0 = e0+h;</span><br><span class="line">                count = <span class="number">0</span>;</span><br><span class="line">                delta1 = delta;</span><br><span class="line">                h1 = h;</span><br><span class="line">                delta_judge1 = delta_judge;</span><br><span class="line">                [x0,y0,judge0]= solution_function(x_min,x_max,e0);</span><br><span class="line">                [x1,y1,judge1]= solution_function(x_min,x_max,e0+h1); </span><br><span class="line">            <span class="keyword">end</span></span><br><span class="line">            <span class="keyword">if</span> judge0*judge1&lt;<span class="number">0</span> </span><br><span class="line">                h1 = h1/<span class="number">2</span>;</span><br><span class="line">                count = count+<span class="number">1</span>;</span><br><span class="line">                <span class="keyword">if</span> count == <span class="number">1</span></span><br><span class="line">                    delta1 = delta1*(<span class="built_in">abs</span>(judge0)+<span class="built_in">abs</span>(judge1))/<span class="number">2</span>;</span><br><span class="line">                    delta_judge1 = <span class="built_in">min</span>([<span class="built_in">abs</span>(judge0),<span class="built_in">abs</span>(judge1)]).*delta_judge1;            </span><br><span class="line">                <span class="keyword">end</span>            </span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                e0 = e0+h1;</span><br><span class="line">            <span class="keyword">end</span></span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">        <span class="keyword">if</span> e0 &lt; e_end</span><br><span class="line">            e = [e0];</span><br><span class="line">            energy = [energy,e];</span><br><span class="line">            x = [x;x0];</span><br><span class="line">            y2 = y0.^<span class="number">2</span>;</span><br><span class="line">            I = simpson38(x0(<span class="number">1</span>:n+<span class="number">1</span>),y2(<span class="number">1</span>:n+<span class="number">1</span>)) + simpson38(x0(n+<span class="number">1</span>:<span class="number">2</span>*n+<span class="number">1</span>),y2(n+<span class="number">1</span>:<span class="number">2</span>*n+<span class="number">1</span>));</span><br><span class="line">            y0 = y0./<span class="built_in">sqrt</span>(I);</span><br><span class="line">            y = [y;y0];</span><br><span class="line">            number = <span class="built_in">size</span>(energy,<span class="number">2</span>);</span><br><span class="line">            e0 = e0 + h;</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">xm</span> = <span class="title">find_xm</span><span class="params">(e)</span></span></span><br><span class="line">        f = @(x)(e-v(x));</span><br><span class="line">        xm = finding(x_min,x_max,<span class="number">1</span>,f,delta,epsilon,h);</span><br><span class="line">        xm = xm(<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="params">[x,y,judge]</span> = <span class="title">solution_function</span><span class="params">(x_min,x_max,e)</span></span></span><br><span class="line">        xm = find_xm(e);</span><br><span class="line">        f = @(x,y)[y(<span class="number">2</span>),-<span class="built_in">gamma</span>^<span class="number">2</span>*(e-v(x))*y(<span class="number">1</span>)];</span><br><span class="line">        [xl,yl]=RK_solution(x_min,xm,y1a,n,f);</span><br><span class="line">        [xr,yr]=RK_solution(x_max,xm,y1b,n,f);</span><br><span class="line">        xr = flip(xr);</span><br><span class="line">        yr = flip(yr,<span class="number">1</span>);</span><br><span class="line">        yl = yl(:,<span class="number">1</span>)&#x27;;</span><br><span class="line">        yr = yr(:,<span class="number">1</span>)&#x27;;</span><br><span class="line">        x = [xl,xr(<span class="number">2</span>:n+<span class="number">1</span>)];</span><br><span class="line">        yr = yr.*(yl(n+<span class="number">1</span>)/yr(<span class="number">1</span>));</span><br><span class="line">        y = [yl,yr(<span class="number">1</span>,<span class="number">2</span>:n+<span class="number">1</span>)];</span><br><span class="line">        judge = (y(n+<span class="number">2</span>)-y(n+<span class="number">1</span>))/(x(n+<span class="number">2</span>)-x(n+<span class="number">1</span>))-(y(n+<span class="number">1</span>)-y(n))/(x(n+<span class="number">1</span>)-x(n));</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p><strong>索末菲方法</strong></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%sommerfeld_energy = sommerfeld(n,v,gamma,h,delta,epsilon,x_l,x_r,e_start) </span></span><br><span class="line"><span class="comment">%--------输入</span></span><br><span class="line"><span class="comment">% n代表态,n=0表示基态,v代表势能函数,gamma代表系数。h是能量的搜索步长,也是无量纲化后寻找经典允许区域边界的搜索步长。x_l是寻找允许区左边界的启动点,x_r是寻找允许区右边界的搜索启动点,x_start是能量本征值的修锁启动点。</span></span><br><span class="line"><span class="comment">%--------输出</span></span><br><span class="line"><span class="comment">%会输出一个具体的数,代表着这个态的能量本征值。</span></span><br><span class="line"><span class="comment">%--------例子</span></span><br><span class="line"><span class="comment">%v = @(x)4*(x.^(-12)-x.^(-6))</span></span><br><span class="line"><span class="comment">%sommerfeld_energy = sommerfeld(1,v,20,0.01,0.01,0.01,0.999,2^(1/6),-0.9999)</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sommerfeld_energy</span> = <span class="title">sommerfeld</span><span class="params">(n,v,gamma,h,delta,epsilon,x_l,x_r,e_start)</span> </span></span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    <span class="comment">%start1,start3后来被用来简单搜索法的启动点(搜索xin,xout)</span></span><br><span class="line">    <span class="comment">%start1 = 0.999;</span></span><br><span class="line">    <span class="comment">%start3 = 2^(1/6);</span></span><br><span class="line">    <span class="comment">%start5 = -1;</span></span><br><span class="line"></span><br><span class="line">    start1 = x_l;</span><br><span class="line">    start3 = x_r;</span><br><span class="line">    start5 = e_start;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">%定义精度和寻找步长</span></span><br><span class="line">    <span class="comment">%epsilon = 0.001;</span></span><br><span class="line">    <span class="comment">%delta = 0.0001;</span></span><br><span class="line">    <span class="comment">%h = 0.0001;</span></span><br><span class="line"></span><br><span class="line">    y = @(x)integrate(<span class="built_in">gamma</span>,x,start1,start3,h,delta)-(n+<span class="number">1</span>/<span class="number">2</span>)*<span class="built_in">pi</span>;</span><br><span class="line">    sommerfeld_energy = simple(y,start5,h,delta);</span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">I_simpson38</span>  = <span class="title">integrate</span><span class="params">(gamma,epsn,start1,start3,h,delta)</span></span></span><br><span class="line">        y0 = @(x)epsn-v(x);</span><br><span class="line">        xin = simple(y0,start1,h,delta);</span><br><span class="line">        xout = simple(y0,start3,h,delta);</span><br><span class="line">        y1 = @(x)<span class="built_in">gamma</span>*(epsn-v(x)).^(<span class="number">1</span>/<span class="number">2</span>);</span><br><span class="line">        N = <span class="number">600</span>;</span><br><span class="line">        H = (xout-xin)/N;</span><br><span class="line">        x = xin:H:xout; </span><br><span class="line">        f1 = y1(x);</span><br><span class="line">        I_simpson38=<span class="number">3</span>/<span class="number">8</span>*H*(f1(<span class="number">1</span>)+<span class="number">3</span>*sum(f1(<span class="number">2</span>:<span class="number">3</span>:<span class="keyword">end</span><span class="number">-2</span>))+<span class="number">3</span>*sum(f1(<span class="number">3</span>:<span class="number">3</span>:<span class="keyword">end</span><span class="number">-1</span>))+<span class="number">2</span>*sum(f1(<span class="number">4</span>:<span class="number">3</span>:<span class="keyword">end</span><span class="number">-3</span>))+f1(<span class="keyword">end</span>));  </span><br><span class="line">    </span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">position</span>=<span class="title">simple</span><span class="params">(f, x0, h, delta)</span> </span></span><br><span class="line">        <span class="keyword">while</span> <span class="built_in">abs</span>(f(x0)) &gt; delta</span><br><span class="line">    </span><br><span class="line">        <span class="keyword">if</span> f(x0)*f(x0+h)&gt;<span class="number">0</span></span><br><span class="line">            x0 = x0 + h;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            h = h/<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">        position = x0;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%AE%A1%E7%AE%97%E7%89%A9%E7%90%86/" rel="tag"># 计算物理</a>
+              <a href="/tags/matlab/" rel="tag"># matlab</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/06/10/liang-zi-chang-lun-bi-ji/" rel="prev" title="量子场论笔记">
+                  <i class="fa fa-angle-left"></i> 量子场论笔记
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2024/06/12/hexo-ji-chu-yi-ji-github-bu-shu/" rel="next" title="hexo基础以及github部署">
+                  hexo基础以及github部署 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Chenhao Peng</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/Chenhao-Peng" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+  <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.3.0/pdfobject.min.js","integrity":"sha256-JJZNsid68vnh3/zyj0lY9BN5ynxVX/12XgOa1TlaYN0="},"url":"/lib/pdf/web/viewer.html"}</script>
+  <script src="/js/third-party/tags/pdf.js"></script>
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.0/mermaid.min.js","integrity":"sha256-stuqcu2FrjYCXDOytWFA5SoUE/r3nkp6gTglzNSlavU="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"all","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"http://chenhao-peng.github.io/2024/06/11/ji-suan-wu-li-ke-cheng-bi-ji/"}</script>
+  <script src="/js/third-party/quicklink.js"></script>
+
+</body>
+</html>
