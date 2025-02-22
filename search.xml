@@ -4,6 +4,91 @@
   
     
     <entry>
+      <title>群论手写笔记</title>
+      <link href="/2025/02/22/qun-lun-shou-xie-bi-ji/"/>
+      <url>/2025/02/22/qun-lun-shou-xie-bi-ji/</url>
+      
+        <content type="html"><![CDATA[<p>前面杂七杂八的群论1，后面杂七杂八的李群。</p><p><a href="群论笔记.pdf.pdf">下载链接</a></p><embed src="./群论笔记.pdf" width="100%" height="900" type="application/pdf">]]></content>
+      
+      
+      <categories>
+          
+          <category> 群论 </category>
+          
+          <category> 读书笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> GroupTheory </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>宇宙学笔记pdf版本</title>
+      <link href="/2025/02/22/yu-zhou-xue-bi-ji-pdf-ban-ben/"/>
+      <url>/2025/02/22/yu-zhou-xue-bi-ji-pdf-ban-ben/</url>
+      
+        <content type="html"><![CDATA[<p>持续更新，是宇宙学笔记的pdf版本。</p><p><a href="cosmology.pdf.pdf">下载链接</a></p><embed src="./cosmology.pdf" width="100%" height="900" type="application/pdf">]]></content>
+      
+      
+      <categories>
+          
+          <category> 宇宙学 </category>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 宇宙学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Conformal Field and string</title>
+      <link href="/2025/02/22/conformal-field-and-string/"/>
+      <url>/2025/02/22/conformal-field-and-string/</url>
+      
+        <content type="html"><![CDATA[<p>持续更新，没写多少。 <a href="string_theory.pdf">下载链接</a></p><embed src="./string_theory.pdf" width="100%" height="900" type="application/pdf">]]></content>
+      
+      
+      <categories>
+          
+          <category> 量子场论 </category>
+          
+          <category> 读书笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 量子场论 </tag>
+            
+            <tag> conformal </tag>
+            
+            <tag> string </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>电动力学手写笔记</title>
       <link href="/2024/09/06/dian-dong-li-xue-shou-xie-bi-ji/"/>
       <url>/2024/09/06/dian-dong-li-xue-shou-xie-bi-ji/</url>
@@ -62,7 +147,7 @@
       <link href="/2024/06/21/liang-zi-chang-lun-shou-xie-bi-ji/"/>
       <url>/2024/06/21/liang-zi-chang-lun-shou-xie-bi-ji/</url>
       
-        <content type="html"><![CDATA[<p>分为了两个部分（一个部分传不上去） <ahref="Greiner阅读笔记_部分1.pdf">下载链接1</a> <ahref="Greiner阅读笔记_部分2.pdf">下载链接2</a></p><embed src="./Greiner阅读笔记_部分1.pdf" width="100%" height="900" type="application/pdf"><embed src="./Greiner阅读笔记_部分2.pdf" width="100%" height="900" type="application/pdf">]]></content>
+        <content type="html"><![CDATA[<p>是阅读量子场论时候的手写笔记，一共分为了 5部分（一个部分传不上去）。上面有杂七杂八的计算....可能意义不大吧。占用了好多空间。不知道github有没有对仓库总文件量的限制。----好像是1G。感觉这个手写笔记耗费地方。。。。</p><p><a href="量子场论阅读笔记_1.pdf">下载链接1</a> <ahref="量子场论阅读笔记_2.pdf">下载链接2</a> <ahref="量子场论阅读笔记_3.pdf">下载链接3</a> <ahref="量子场论阅读笔记_4.pdf">下载链接4</a> <ahref="量子场论阅读笔记_5.pdf">下载链接4</a></p><embed src="./量子场论阅读笔记_1.pdf" width="100%" height="900" type="application/pdf"><embed src="./量子场论阅读笔记_2.pdf" width="100%" height="900" type="application/pdf"><embed src="./量子场论阅读笔记_3.pdf" width="100%" height="900" type="application/pdf"><embed src="./量子场论阅读笔记_4.pdf" width="100%" height="900" type="application/pdf"><embed src="./量子场论阅读笔记_5.pdf" width="100%" height="900" type="application/pdf">]]></content>
       
       
       <categories>
@@ -79,6 +164,8 @@
             <tag> 量子场论 </tag>
             
             <tag> Greiner </tag>
+            
+            <tag> Srednicki </tag>
             
         </tags>
       
@@ -269,9 +356,9 @@
             
             <tag> 量子力学 </tag>
             
-            <tag> 量子场论 </tag>
-            
             <tag> QFT </tag>
+            
+            <tag> 量子场论 </tag>
             
             <tag> 泛函 </tag>
             
