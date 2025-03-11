@@ -202,7 +202,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2025-03-11 10:12:34 / 修改时间：10:14:07" itemprop="dateCreated datePublished" datetime="2025-03-11T10:12:34+08:00">2025-03-11</time>
+      <time title="创建时间：2025-03-11 10:12:34 / 修改时间：18:05:16" itemprop="dateCreated datePublished" datetime="2025-03-11T10:12:34+08:00">2025-03-11</time>
     </span>
 
   
@@ -215,62 +215,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h3 id="Wiener-Kinchin-theorem-以及白噪声，以及噪声的单位里为什么有根号赫兹-sqrt-Hz"><a href="#Wiener-Kinchin-theorem-以及白噪声，以及噪声的单位里为什么有根号赫兹-sqrt-Hz" class="headerlink" title="Wiener-Kinchin theorem, 以及白噪声，以及噪声的单位里为什么有根号赫兹 $\sqrt{Hz}$"></a>Wiener-Kinchin theorem, 以及白噪声，以及噪声的单位里为什么有根号赫兹 $\sqrt{Hz}$</h3><p>如果有一个信号（噪声比如说），关联函数满足 (尖括号代表取平均值)</p>
-<script type="math/tex; mode=display">
-C(\tau)=\langle x(t)x(t+\tau)\rangle.</script><p>定义 Fourier 变换后的关联函数为 </p>
-<script type="math/tex; mode=display">
-\hat{C}(w) = \int_{-\infty}^{+\infty} d\tau e^{-iw\tau}C(\tau)</script><p>定义一段时间的坐标的 Fourier 变换,,, 这是考虑到测量到的总是一段时间的，所以是先取一段。</p>
-<script type="math/tex; mode=display">
-\hat{x}_T(w)\equiv\int_{-T/2}^{T/2}dt e^{-iwt}x(t)</script><p>定义 一段时间的spectral power density 为 </p>
-<script type="math/tex; mode=display">
-\hat{S}_T(w) \equiv \frac{1}{T}\langle|\hat{x}_T(w)|^2\rangle.</script><p>spectral power density 定义为 </p>
-<script type="math/tex; mode=display">
-\hat{S}(w)\equiv \lim_{T\to\infty} S_T(w) \equiv \lim_{T\to\infty}\frac{1}{T}\langle|\hat{x}_T(w)|^2\rangle</script><p><strong>Wiener-Kinchin theorem:</strong> </p>
-<script type="math/tex; mode=display">
-\hat{S}(w)=\hat{C}(w)</script><p>下面是简短的证明：Proof of Weiner-Kinchin theorem by direct calculation.</p>
-<script type="math/tex; mode=display">
-\begin{align}
-\hat{S}(w)&=\lim_{T\to\infty}\frac{1}{T}\int_{-T/2}^{T/2}\int_{-T/2}^{T/2}dtds \langle x(s)x(t)\rangle e^{-iw(s-t)}\\
-&=\lim_{T\to\infty}\frac{1}{T}\int_{-T/2}^{T/2}\int_{-T/2}^{T/2}dtds\; C(s-t)\; e^{-iw(s-t)}
-\end{align}</script><p>考虑到积分性质 ( 可以画一个正方形的积分区间，然后观察一下)</p>
-<script type="math/tex; mode=display">
-\int_{-T/2}^{T/2}ds\int_{-T/2}^{T/2}dt g(s-t)=\int_{-T}^T d\tau\; g(\tau)(T-|\tau|)</script><p>于是 spectral power density 是 </p>
-<script type="math/tex; mode=display">
-\begin{align}
-\hat{S}(w)&=\lim_{T\to\infty}\frac{1}{T}\int_{-T}^{T}d\tau C(\tau)e^{-iw\tau}(T-|\tau|)\\
-&=\lim_{T\to\infty}\int_{-T}^{T}d\tau C(\tau)e^{-iw\tau}\\
-&=\hat{C}(w)
-\end{align}</script><p><strong>White Noise</strong></p>
-<p>白噪声的特点是, (下一时刻的噪声和这一时刻没有关联)</p>
-<script type="math/tex; mode=display">
-\langle x(t)\rangle=0,\quad \langle x(t)x(t+\tau)\rangle=A\delta(\tau).</script><p>既然关联函数是 delta 函数，correlation function 的频域函数是</p>
-<script type="math/tex; mode=display">
-C(\tau)=A\delta(\tau)=A\frac{1}{\sqrt{2\pi}}\int dw e^{iw\tau}.\Rightarrow \hat{C}(w)=A</script><p>Note, 用到了 delta 函数的性质 $\int dx e^{iwx}=\sqrt{2\pi}\delta(w)$ . 根据 Weiner-Kinchin theorem ,spectral power density is </p>
-<script type="math/tex; mode=display">
-\hat{S}(w)=Const= \lim_{T\to\infty}\frac{1}{T}\langle|\hat{x}_T(w)|^2\rangle</script><p><strong>Fourier transform of noise signal</strong> </p>
-<p>现在做了测量，在时间 $-T/2\to T/2$ 之间有信号 $x(t)$. 他可以被 Fourier 展开 </p>
-<script type="math/tex; mode=display">
-x(t)=\sum_{n=1}^{\infty}c_n e^{iw_n t},\quad w_n=\frac{2\pi}{T}n.</script><p>直接计算得到一段时间内的坐标在频域的函数</p>
-<script type="math/tex; mode=display">
-\hat{x}(w_n)=\int_{-T/2}^{T/2}dt e^{-iw_nt}x(t)=Tc_n</script><p>所以 </p>
-<script type="math/tex; mode=display">
-\hat{S}(w_n)=Const = \lim_{T\to\infty }\frac{1}{T}\langle|\hat{x}_T(w)|^2\rangle=T\langle|c_n|^2\rangle</script><p>既然这个常数与总时间 T 以及频率的取值 n 都没有关系。认为 $\langle|c_n|^2\rangle=\sigma^2$</p>
-<p>于是 </p>
-<script type="math/tex; mode=display">
-\langle|c_n|^2\rangle=\sigma^2 = \frac{1}{T}Const</script><p>如果说测量的信号的单位是  Tesla ($T$), 那么可以用这个常数来度量噪声的强度，单位是 $T^2\cdot s$. 或者说，用 $\sqrt{Const}$  来度量噪声的强度，单位是 $T/\sqrt{Hz}$. </p>
-<p><strong>测量噪声的强度</strong></p>
-<p>这里主要是和 matlab 的 fft代码关联。matlab fft 的作用是 </p>
-<script type="math/tex; mode=display">
-Y(k)=\sum_{j=1}^N X(j)e^{-\frac{2\pi i}{N}(j-1)(k-1)}\\
-X(j)=\frac{1}{N}\sum_{k=1}^N Y(k)e^{\frac{2\pi i}{N}(j-1)(k-1)}</script><p>认为每一步的时间是 $t_j = \frac{j-1}{N}T_0$ ,  离散的频率取为 $\omega_k = \frac{2\pi}{T_0}(k-1)=\delta\omega (k-1) $。理解为 (时间的取值范围是 $0\to T_0(1-\frac{1}{N})$ , 频率的取值范围是 $0\to \frac{2\pi}{T_0}(N-1)$ ) </p>
-<script type="math/tex; mode=display">
-Y(\omega_k)=\sum_{t_j = 0}^{T_0-\delta t} X(t_j)e^{-i\omega_kt_j}\\
-X(t_j)=\frac{1}{N}\sum_{\omega_k = 0}^{\frac{2\pi}{T_0}(N-1)}Y(\omega_k)e^{i\omega_k t_j}</script><p>如果将时间做一个平移，</p>
-<script type="math/tex; mode=display">
-X(t_j-T/2+T/2)=\frac{1}{N}\sum_{\omega_k = 0}^{\frac{2\pi}{T_0}(N-1)}Y(\omega_k)e^{i\omega_k (t_j-T/2)}e^{i\omega_kT/2}</script><p>所以 $c_k =\frac{1}{N}|Y’(\omega_k)|=\frac{1}{N}|Y(\omega_k)|$。  所以用 fft 算出来的 Y 和需要的物理量 c 之间的关系就是这个。</p>
-<p>之后再对各种频率的 $c^2$ 取平均，再乘以测量的总时间，再开根号就是需要的噪声水平。</p>
-<script type="math/tex; mode=display">
-\sqrt{Const}=\left[T\frac{1}{N}\sum_{k=1}^N\left(\frac{1}{N}Y(w_k)\right)^2\right]^{1/2}=\left[\delta t\sum_{k=1}^N\left(\frac{1}{N}Y(w_k)\right)^2\right]^{1/2}.</script>
+          <p>Wiener-Kinchin theorem, 以及白噪声，以及噪声的单位里为什么有根号</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2025/03/11/wiener-kinchin-theorem-yi-ji-bai-zao-sheng-yi-ji-zao-sheng-de-dan-wei-li-wei-shi-me-you-gen-hao-he-zi/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
