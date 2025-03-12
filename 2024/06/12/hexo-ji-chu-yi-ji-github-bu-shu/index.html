@@ -117,7 +117,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">1.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#github%E4%B8%8A%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="nav-number">2.</span> <span class="nav-text">github上创建仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8%E6%9C%AC%E5%9C%B0blog%E7%9B%AE%E5%BD%95%E4%B8%8B%E5%AE%89%E8%A3%85git%E7%9A%84%E9%83%A8%E7%BD%B2%E6%8F%92%E4%BB%B6"><span class="nav-number">3.</span> <span class="nav-text">在本地blog目录下安装git的部署插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE-config-yml-%E6%96%87%E4%BB%B6"><span class="nav-number">4.</span> <span class="nav-text">设置 _config.yml 文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%86hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E8%BF%9C%E7%AB%AF"><span class="nav-number">5.</span> <span class="nav-text">将hexo部署到远端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98"><span class="nav-number">6.</span> <span class="nav-text">更换主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%99%E6%96%87%E7%AB%A0"><span class="nav-number">7.</span> <span class="nav-text">写文章</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">1.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#github%E4%B8%8A%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="nav-number">2.</span> <span class="nav-text">github上创建仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8%E6%9C%AC%E5%9C%B0blog%E7%9B%AE%E5%BD%95%E4%B8%8B%E5%AE%89%E8%A3%85git%E7%9A%84%E9%83%A8%E7%BD%B2%E6%8F%92%E4%BB%B6"><span class="nav-number">3.</span> <span class="nav-text">在本地blog目录下安装git的部署插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE-_config.yml-%E6%96%87%E4%BB%B6"><span class="nav-number">4.</span> <span class="nav-text">设置 _config.yml 文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%86hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E8%BF%9C%E7%AB%AF"><span class="nav-number">5.</span> <span class="nav-text">将hexo部署到远端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98"><span class="nav-number">6.</span> <span class="nav-text">更换主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%99%E6%96%87%E7%AB%A0"><span class="nav-number">7.</span> <span class="nav-text">写文章</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -240,10 +240,12 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty/?spm_id_from=333.337.top_right_bar_window_history.content.click&amp;vd_source=2ed6b2cfcd027bbe7f7bac6d27852f66">学习视频b站地址</a></p>
+    <div class="post-body" itemprop="articleBody"><p><a
+target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty/?spm_id_from=333.337.top_right_bar_window_history.content.click&amp;vd_source=2ed6b2cfcd027bbe7f7bac6d27852f66">学习视频b站地址</a></p>
 <p>首先进入管理员模式</p>
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">sudo su</span></span><br></pre></td></tr></table></figure>
-<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>创建文件夹</p>
+<h3 id="初始化">初始化</h3>
+<p>创建文件夹</p>
 <figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir blog</span><br></pre></td></tr></table></figure>
 <p>进入到创建的文件夹中</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> blog/</span><br></pre></td></tr></table></figure>
@@ -263,24 +265,32 @@
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo g</span></span><br></pre></td></tr></table></figure>
 <p>show博客，前面提到过了</p>
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo s</span></span><br></pre></td></tr></table></figure>
-<h3 id="github上创建仓库"><a href="#github上创建仓库" class="headerlink" title="github上创建仓库"></a>github上创建仓库</h3><p>仓库的名字叫做</p>
+<h3 id="github上创建仓库">github上创建仓库</h3>
+<p>仓库的名字叫做</p>
 <figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Chenhao-Peng.github.<span class="built_in">io</span></span><br></pre></td></tr></table></figure>
-<h3 id="在本地blog目录下安装git的部署插件"><a href="#在本地blog目录下安装git的部署插件" class="headerlink" title="在本地blog目录下安装git的部署插件"></a>在本地blog目录下安装git的部署插件</h3><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install <span class="comment">--save hexo-deployer-git</span></span><br></pre></td></tr></table></figure>
-<h3 id="设置-config-yml-文件"><a href="#设置-config-yml-文件" class="headerlink" title="设置 _config.yml 文件"></a>设置 _config.yml 文件</h3><p>用vim打开config文件。</p>
+<h3
+id="在本地blog目录下安装git的部署插件">在本地blog目录下安装git的部署插件</h3>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install <span class="comment">--save hexo-deployer-git</span></span><br></pre></td></tr></table></figure>
+<h3 id="设置-_config.yml-文件">设置 _config.yml 文件</h3>
+<p>用vim打开config文件。</p>
 <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim _<span class="built_in">config</span>.yml</span><br></pre></td></tr></table></figure>
 <p>之后滚动到文件的最底部，能找到Deployment 部分，这么写。</p>
 <figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">deploy:</span></span><br><span class="line"><span class="symbol">  type:</span> git</span><br><span class="line"><span class="symbol">  repo:</span> https:<span class="comment">//ghp_HXhQif6iSqWLI8BV0cSG21Dg7SYB********@github.com/Chenhao-Peng/Chenhao-Peng.github.io.git</span></span><br><span class="line"><span class="symbol">  branch:</span> master</span><br></pre></td></tr></table></figure>
-<p>上面的token “ghp…”是从github-设置-开发者设置-Tokens中找到的。</p>
+<p>上面的token "ghp..."是从github-设置-开发者设置-Tokens中找到的。</p>
 <p>之后，按一下键盘的esc，然后输入:wq就可以保存退出了。</p>
-<h3 id="将hexo部署到远端"><a href="#将hexo部署到远端" class="headerlink" title="将hexo部署到远端"></a>将hexo部署到远端</h3><p>使用命令</p>
+<h3 id="将hexo部署到远端">将hexo部署到远端</h3>
+<p>使用命令</p>
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo d</span></span><br></pre></td></tr></table></figure>
 <p>会让输入github的账号与密码。不过现在需要设置token才可以正常访问。</p>
-<h3 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h3><p>比如说，换为github上的yilia主题。在blog目录下，用git命令：</p>
+<h3 id="更换主题">更换主题</h3>
+<p>比如说，换为github上的yilia主题。在blog目录下，用git命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
 <p>将一个主题克隆到了yilia主题下的目录里。</p>
-<p>之后回到_config.yml文件。在这个文件中的Extension 部分，有一个theme: 直接把后面的改为yilia就好了。</p>
+<p>之后回到_config.yml文件。在这个文件中的Extension 部分，有一个theme:
+直接把后面的改为yilia就好了。</p>
 <p>之后就是hexo clean, hexo g, hexo d。（清理，生成，部署）</p>
-<h3 id="写文章"><a href="#写文章" class="headerlink" title="写文章"></a>写文章</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;title&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="写文章">写文章</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;title&quot;</span><br></pre></td></tr></table></figure>
 <p>之后，在文章的前面要有类似于这样的标识：</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: hexo基础以及github部署</span><br><span class="line">date: 2024-06-12 00:47:17</span><br><span class="line">author: Chenhao Peng</span><br><span class="line">mathjax: true</span><br><span class="line">categories: </span><br><span class="line"><span class="bullet">    -</span> blog</span><br><span class="line"><span class="bullet">    -</span> hexo</span><br><span class="line">tags: </span><br><span class="line"><span class="bullet">    -</span> hexo</span><br><span class="line"><span class="section">    - blog</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
 
