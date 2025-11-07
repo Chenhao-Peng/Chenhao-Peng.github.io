@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.2.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"chenhao-peng.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="组会讲的。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="seminar--机器学习用于寻找Integrable system">
+<meta property="og:url" content="http://chenhao-peng.github.io/2025/11/07/seminar-ji-qi-xue-xi-yong-yu-xun-zhao-integrable-system/index.html">
+<meta property="og:site_name" content="Chenhao Peng&#39;s nest">
+<meta property="og:description" content="组会讲的。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-11-07T03:24:12.000Z">
+<meta property="article:modified_time" content="2025-11-07T03:38:35.190Z">
+<meta property="article:author" content="Chenhao Peng">
+<meta property="article:tag" content="量子场论">
+<meta property="article:tag" content="可积系统">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://chenhao-peng.github.io/2025/11/07/seminar-ji-qi-xue-xi-yong-yu-xun-zhao-integrable-system/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://chenhao-peng.github.io/2025/11/07/seminar-ji-qi-xue-xi-yong-yu-xun-zhao-integrable-system/","path":"2025/11/07/seminar-ji-qi-xue-xi-yong-yu-xun-zhao-integrable-system/","title":"seminar--机器学习用于寻找Integrable system"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>seminar--机器学习用于寻找Integrable system | Chenhao Peng's nest</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Chenhao Peng's nest</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Have a nice day ^-^</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#overview"><span class="nav-number">1.</span> <span class="nav-text">overview</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#quantum-integrable-spin-chain"><span class="nav-number">2.</span> <span class="nav-text">Quantum integrable
+spin-chain</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#families-of-integrable-models-as-algebraic-varieties"><span class="nav-number">3.</span> <span class="nav-text">families
+of integrable models as algebraic varieties</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#neural-networks"><span class="nav-number">4.</span> <span class="nav-text">Neural networks</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Chenhao Peng"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Chenhao Peng</p>
+  <div class="site-description" itemprop="description">High-Energy phenomenology phd candidate</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Chenhao-Peng" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Chenhao-Peng" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:chenhaopeng712100@gmail.com" title="E-Mail → mailto:chenhaopeng712100@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://chenhao-peng.github.io/2025/11/07/seminar-ji-qi-xue-xi-yong-yu-xun-zhao-integrable-system/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Chenhao Peng">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chenhao Peng's nest">
+      <meta itemprop="description" content="High-Energy phenomenology phd candidate">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="seminar--机器学习用于寻找Integrable system | Chenhao Peng's nest">
+      <meta itemprop="description" content="组会讲的。">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          seminar--机器学习用于寻找Integrable system
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2025-11-07 11:24:12 / 修改时间：11:38:35" itemprop="dateCreated datePublished" datetime="2025-11-07T11:24:12+08:00">2025-11-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Seminar/" itemprop="url" rel="index"><span itemprop="name">Seminar</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+            <div class="post-description">组会讲的。</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>based on <a target="_blank" rel="noopener" href="http://arxiv.org/abs/2503.10469">Article</a></p>
+<h3 id="overview">overview</h3>
+<ul>
+<li><p>Initialization: consider <span class="math inline">\(d =
+3\)</span> and <span class="math display">\[
+R=
+\begin{pmatrix}
+* &amp; 0 &amp; * &amp; 0 &amp; * &amp; 0 &amp; * &amp; 0 &amp; * \\
+0 &amp; * &amp; 0 &amp; * &amp; 0 &amp; * &amp; 0 &amp; * &amp; 0 \\
+* &amp; 0 &amp; * &amp; 0 &amp; * &amp; 0 &amp; * &amp; 0 &amp; * \\
+0 &amp; * &amp; 0 &amp; * &amp; 0 &amp; * &amp; 0 &amp; * &amp; 0 \\
+* &amp; 0 &amp; * &amp; 0 &amp; * &amp; 0 &amp; * &amp; 0 &amp; * \\
+0 &amp; * &amp; 0 &amp; * &amp; 0 &amp; * &amp; 0 &amp; * &amp; 0 \\
+* &amp; 0 &amp; * &amp; 0 &amp; * &amp; 0 &amp; * &amp; 0 &amp; * \\
+0 &amp; * &amp; 0 &amp;*&amp;0&amp;*&amp;0&amp;*&amp;0\\
+* &amp; 0 &amp; * &amp; 0 &amp; * &amp; 0 &amp; * &amp; 0 &amp; *
+\end{pmatrix},
+\]</span></p></li>
+<li><p>Using Neural network solve YBE of this ansatz
+numerically</p></li>
+<li><p>Look for algebraic variety of integrable model in the vicinity of
+numerically found Hamiltonian.</p></li>
+<li><p>R-matrix is extracted using hamiltonian.</p></li>
+</ul>
+<h3 id="quantum-integrable-spin-chain">Quantum integrable
+spin-chain</h3>
+<p>Hamiltonian <span class="math display">\[
+H=\sum_{i=1}^LH_{i,i+1},
+\]</span> existence of a tower of mutually commuting charges <span
+class="math display">\[
+[\mathbb{Q}_m,\mathbb{Q}_n]=0\mathrm{~.}
+\]</span> R matrix is a matrix satisfy Yang-Baxter equation <span
+class="math display">\[
+R_{ij}(u-v)R_{ik}(u)R_{jk}(v)=R_{jk}(v)R_{ik}(u)R_{ij}(u-v)
+\]</span> R matrix has property <span class="math display">\[
+R_{ij}(0)=P_{ij}
+\]</span> Transfer matrix <span
+class="math inline">\([T(u),T(v)]=0\)</span> . <span
+class="math display">\[
+T(u)=\mathrm{tr}_a\left(R_{a,L}(u)R_{a,L-1}(u)\ldots
+R_{a,1}(u)\right)\mathrm{~,}
+\]</span> Transfer matrix can be expanded using conserved charge <span
+class="math display">\[
+\log T(u)=\sum_{n=0}^\infty\mathbb{Q}_{n+1}\frac{u^n}{n!}\mathrm{~.}
+\]</span> in particular, second charge is hamiltonian <span
+class="math inline">\(\mathbb{Q}_2=H\)</span>. Hamiltonian density can
+be generated from R-matrix (P is permutation operator) <span
+class="math display">\[
+\begin{aligned}
+H_{i,i+1} &amp; =R_{i,i+1}^{-1}(u)\frac{d}{du}R_{i,i+1}(u)|_{u=0} \\
+&amp; =P_{i,i+1}\frac{d}{du}R_{i,i+1}(u)|_{u=0},
+\end{aligned}
+\]</span> class of equivalence modulo R matrix:</p>
+<ul>
+<li><p>similarity transformation <span class="math display">\[
+(\Omega\otimes\Omega)R(u)(\Omega^{-1}\otimes\Omega^{-1})
+\]</span></p></li>
+<li><p>rescaling transformation <span class="math display">\[
+u\to cu,\forall c\in\mathbb{C},
+\]</span></p></li>
+<li><p>mutiplication by any scalar holomorphic function <span
+class="math display">\[
+R(u)\to f(u)R(u)
+\]</span></p></li>
+<li><p>permutation,transpositation and their composition <span
+class="math display">\[
+PR(u)P,R(u)^T,PR^T(u)P.
+\]</span></p></li>
+</ul>
+<h3 id="families-of-integrable-models-as-algebraic-varieties">families
+of integrable models as algebraic varieties</h3>
+<p>define boost operator <span class="math display">\[
+\mathcal{B}=\sum_{a=-\infty}^\infty aH_{a,a+1}
+\]</span> higher charges can be generated with boost operator <span
+class="math display">\[
+\mathbb{Q}_{r+1}=\left[\mathcal{B},\mathbb{Q}_r\right].
+\]</span> denote charge as (L means spin-chains of finite length L)
+<span class="math display">\[
+\mathbb{Q}_r^L=\sum_{a=1}^LH_{a,a+1,..,a+r-1}.
+\]</span> focus on the constraint: (Re'shetikhin condition) <span
+class="math display">\[
+[\mathbb{Q}_2^L,\mathbb{Q}_3^L]=0\mathrm{~,}
+\]</span> This is a necessary condition for quantum integrability.</p>
+<ul>
+<li>in order for this condition to be non degenerate, minimal length of
+spin chain should be <span class="math inline">\(L=4\)</span></li>
+<li>if site-space is d-dimensional two-particle hamiltonian has <span
+class="math inline">\(d^4\)</span> parameters with <span
+class="math inline">\(d^8\)</span> scalar equations.</li>
+</ul>
+<p><strong>computational AG</strong></p>
+<p>for a polynomial ring <span
+class="math inline">\(\mathbb{CP}^{d^4-1}\)</span>。Define reducible
+ideal by equations <span class="math display">\[
+I\subset\mathbb{C}[h_{ij}]
+\]</span> algebraic variety can be decomposed in to irreducible
+components <span class="math display">\[
+V(I)=\bigcup_iV(I_i)\mathrm{~,}
+\]</span> in one irreducible branch, using gauge transformation to set
+<span class="math inline">\(d^2-1\)</span> elements in H to be 0。number
+of none zero element in R-matrix is <span class="math inline">\(\Pi_R =
+k&lt;d^4-d^2-1\)</span></p>
+<h3 id="neural-networks">Neural networks</h3>
+<p>use fully-connected neural network, define matrix norm as <span
+class="math display">\[
+||A|| = \sum_{\alpha\beta}^n|A_{\alpha\beta}|
+\]</span> Yang-Baxter equation loss <span class="math display">\[
+\begin{aligned}
+\mathcal{L}_{YBE} &amp;
+=||\mathcal{R}_{12}(u_c)\mathcal{R}_{13}(u_a)\mathcal{R}_{23}(u_b) \\
+&amp;
+-\mathcal{R}_{23}(u_b)\mathcal{R}_{13}(u_a)\mathcal{R}_{12}(u_c)||,
+\end{aligned}
+\]</span> locality condition <span class="math display">\[
+\mathcal{L}_{reg}=||\mathcal{R}\left(0\right)-P||.
+\]</span> once we found a certain hamiltonian from the given class,
+active repulsion loss <span class="math display">\[
+\mathcal{L}_{repulsion}=\exp\left(-\|H-H_o\|/\sigma\right),
+\]</span> loss for Reshetikhin condition <span class="math display">\[
+\mathcal{L}_{Q_2Q_3}=\max\left|[\mathbb{Q}_2,\mathbb{Q}_3]\right|.
+\]</span> Anti-collaps (m.c. means mode collapse):</p>
+<ul>
+<li><p>prvent every coefficient to be zero <span class="math display">\[
+\begin{aligned}
+L_{\mathrm{m.c.}}=\left|\frac{1}{n}\sum_{i,j}|H_{ij}|-1\right|
+\end{aligned}
+\]</span></p></li>
+<li><p>ensure the matrix elements has bose diagonal and off-diagonal
+<span class="math display">\[
+\tilde{L}_{\mathrm{m.c.}}=\left|\frac{1}{n_{\mathrm{diag}}}\sum_{i}|H_{ii}|-\lambda_{\mathrm{diag}}\right|+\left|\frac{1}{n_{\mathrm{off-diag}}}\sum_{i\neq
+j}|H_{ij}|-\lambda_{\mathrm{off-diag}}\right|
+\]</span></p></li>
+<li><p>repulsive from known results <span class="math display">\[
+L_{\mathrm{m.c.}}^{\mathrm{total}}=\tilde{L}_{\mathrm{m.c.}}+\left|\sum_{k}\mu_{k}\left|C_{k}\right|-\lambda_{\mathrm{repul}}\right|
+\]</span></p></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">flowchart TB</span><br><span class="line">  A[Sample spectral parameters ua, ub; set uc = ua - ub] --&gt; B</span><br><span class="line">  B[Choose vertex pattern PR, index set of nonzero R entries] --&gt; RNET</span><br><span class="line"></span><br><span class="line">  subgraph RNET[R Matrix Net - model each nonzero entry]</span><br><span class="line">    direction TB</span><br><span class="line">    IN[Input: scalar spectral parameter u] --&gt; MLPK[Multiple MLPs produce rk u]</span><br><span class="line">    NOTE1[Each rk has its own MLP; output uses identity activation]</span><br><span class="line">  end</span><br><span class="line"></span><br><span class="line">  RNET --&gt; C1[Assemble R12 at uc]</span><br><span class="line">  RNET --&gt; C2[Assemble R13 at ua]</span><br><span class="line">  RNET --&gt; C3[Assemble R23 at ub]</span><br><span class="line"></span><br><span class="line">  subgraph LOSSES[Loss computation]</span><br><span class="line">    direction TB</span><br><span class="line">    YBE[Difference between R12 R13 R23 and R23 R13 R12] --&gt; LYBE[LYBE equals residual norm]</span><br><span class="line">    REG[Regularity - constrain R at 0 to permutation matrix P] --&gt; LREG[LREG]</span><br><span class="line">    RESH[Extract Q2 and Q3 from transfer matrix] --&gt; LQ[LQ equals commutator norm]</span><br><span class="line">    MC[Mode collapse guard - separate diagonal vs off diagonal, avoid known families] --&gt; LMC[LMC]</span><br><span class="line">    REP[Repulsion - push away from known H0 neighborhood] --&gt; LREP[LREP]</span><br><span class="line">  end</span><br><span class="line"></span><br><span class="line">  C1 --&gt; YBE</span><br><span class="line">  C2 --&gt; YBE</span><br><span class="line">  C3 --&gt; YBE</span><br><span class="line"></span><br><span class="line">  LYBE --&gt; SUM</span><br><span class="line">  LREG --&gt; SUM</span><br><span class="line">  LQ --&gt; SUM</span><br><span class="line">  LMC --&gt; SUM</span><br><span class="line">  LREP --&gt; SUM</span><br><span class="line"></span><br><span class="line">  SUM[Total loss L equals weighted sum of all loss terms] --&gt; OPT[Optimization - Adam with JAX JIT; learning rate annealed 1e-3 to 1e-8]</span><br><span class="line">  OPT --&gt; OUT[Output - R of u and H seed; obtain H via derivative dR du at u equals 0]</span><br></pre></td></tr></table></figure>
+<p><strong>Legend and mapping (no math symbols in the
+diagram):</strong></p>
+<ul>
+<li><strong>ua, ub, uc</strong> = spectral parameters (u_a, u_b, u_c)
+with (u_c = u_a - u_b).</li>
+<li><strong>PR</strong> = the vertex pattern (_R), i.e., which entries
+of the (R) matrix are allowed to be nonzero.</li>
+<li><strong>rk(u)</strong> = scalar functions (r_k(u)) parameterizing
+the nonzero entries; each has its own MLP.</li>
+<li><strong>R12, R13, R23</strong> = (R) evaluated on different tensor
+legs at (uc, ua, ub), respectively.</li>
+<li><strong>YBE / LYBE</strong> = Yang–Baxter equation residual and its
+norm.</li>
+<li><strong>REG / LREG</strong> = regularity constraint enforcing (R(0)
+= P) (permutation matrix) and its loss.</li>
+<li><strong>RESH / LQ</strong> = Reshetikhin auxiliary term using the
+commutator ([Q2, Q3]) and its loss.</li>
+<li><strong>MC / LMC</strong> = mode-collapse guard to avoid trivial or
+known families.</li>
+<li><strong>REP / LREP</strong> = repulsion term around a known solution
+(H0).</li>
+<li><strong>SUM</strong> = total loss (L) as a weighted sum of all
+terms.</li>
+<li><strong>OPT</strong> = optimization with Adam (JAX JIT), annealing
+learning rate from (10^{-3}) to (10^{-8}).</li>
+<li><strong>OUT</strong> = outputs the learned (R(u)) and the seed
+Hamiltonian (H), obtained from the derivative (R(u)) at (u=0) via the
+usual prescription.</li>
+</ul>
+<p><strong>find solution</strong></p>
+<ul>
+<li><p>from R-matrix net find new numerical solution $H_{seed}</p></li>
+<li><p>solve Reshetikhin condition near <span
+class="math inline">\(H_{seed}\)</span> , find a set of solution <span
+class="math display">\[
+V=\{H_{\mathrm{num}}^{(k)}\mid1\leq k\leq N\mathrm{~}\}.
+\]</span></p></li>
+<li><p>their relation should be a linear transformation</p></li>
+<li><p>denote a solution as a k- vector <span class="math inline">\(\eta
+= \{h_{ij}\}\)</span></p></li>
+<li><p>ma ke N=K solutions to a matrix <span class="math display">\[
+M=\{\eta^{(1)},\ldots,\eta^{(N)}\}.
+\]</span></p></li>
+<li><p>SVD decomposition <span class="math display">\[
+M = u\sigma v^\dagger
+\]</span></p></li>
+<li><p>Zero-eigen value means linear constraint。 （rank = i0-1） <span
+class="math display">\[
+R_i:\sum_{\alpha=1}^Kv_{\alpha i}\left.\eta_\alpha=0,\quad\right.\quad
+i\geq i_0,
+\]</span></p></li>
+<li><p>use <span class="math inline">\(i_0-1\)</span> basis others can
+be represented by them <span class="math display">\[
+\eta_\beta=\sum_{i=1}^{i_0-1}\tilde{c}_{\beta
+i}\eta_i,\quad\beta&gt;i_0-1.
+\]</span></p></li>
+<li><p>set the numerical coefficients to integer or rational number, and
+regard them as precission relation.</p></li>
+<li><p>reconstruct analytical result from function <span
+class="math display">\[
+H_{i,i+1}=R_{i,i+1}^{-1}(u)\left.\frac{d}{du}R_{i,i+1}(u)\right|_{u=0}=P_{i,i+1}\left.\frac{d}{du}R_{i,i+1}(u)\right|_{u=0}
+\]</span> and <span class="math display">\[
+R_{ij}(0)\sim P_{ij}
+\]</span></p></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E9%87%8F%E5%AD%90%E5%9C%BA%E8%AE%BA/" rel="tag"># 量子场论</a>
+              <a href="/tags/%E5%8F%AF%E7%A7%AF%E7%B3%BB%E7%BB%9F/" rel="tag"># 可积系统</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/08/20/probing-purely-inelastic-scalar-dark-matter-across-colliders-and-gravitational-wave-observatories/" rel="prev" title="Probing Purely Inelastic Scalar Dark Matter Across Colliders and Gravitational Wave Observatories">
+                  <i class="fa fa-angle-left"></i> Probing Purely Inelastic Scalar Dark Matter Across Colliders and Gravitational Wave Observatories
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Chenhao Peng</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/Chenhao-Peng" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+  <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.3.0/pdfobject.min.js","integrity":"sha256-JJZNsid68vnh3/zyj0lY9BN5ynxVX/12XgOa1TlaYN0="},"url":"/lib/pdf/web/viewer.html"}</script>
+  <script src="/js/third-party/tags/pdf.js"></script>
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.0/mermaid.min.js","integrity":"sha256-stuqcu2FrjYCXDOytWFA5SoUE/r3nkp6gTglzNSlavU="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"all","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"http://chenhao-peng.github.io/2025/11/07/seminar-ji-qi-xue-xi-yong-yu-xun-zhao-integrable-system/"}</script>
+  <script src="/js/third-party/quicklink.js"></script>
+
+</body>
+</html>
