@@ -30,7 +30,7 @@
 <meta property="og:description" content=".helmholtz-card {   max-width: 760px;   margin: 0 auto;   padding: 24px;   border: 1px solid #e0e0e0;   border-radius: 12px;   box-shadow: 0 10px 30px rgba(0,0,0,0.05);   background: linear-gradient(">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-12-31T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-11-23T06:37:52.946Z">
+<meta property="article:modified_time" content="2025-11-23T15:51:28.581Z">
 <meta property="article:author" content="Chenhao Peng">
 <meta name="twitter:card" content="summary">
 
@@ -116,7 +116,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">亥姆霍兹线圈磁场计算</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">亥姆霍兹线圈磁场计算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">N 匝单线圈磁场计算</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -242,6 +242,61 @@
   color: #b91c1c;
   font-weight: 600;
 }
+.coil-card {
+  max-width: 780px;
+  margin: 24px auto 0;
+  padding: 24px;
+  border: 1px solid #dde3ea;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+  background: radial-gradient(circle at 20% 20%, #eef5ff 0, #fdfdff 50%, #ffffff 100%);
+}
+.coil-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px 16px;
+  margin-bottom: 14px;
+}
+.coil-grid label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.coil-grid input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #cbd5e0;
+  border-radius: 8px;
+}
+.coil-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.coil-btn {
+  padding: 10px 16px;
+  background: #0ea5e9;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+.coil-btn:hover { background: #0284c7; }
+.coil-btn:active { transform: translateY(1px); }
+.coil-result {
+  background: #0b1021;
+  color: #e2e8f0;
+  padding: 14px;
+  border-radius: 10px;
+  font-family: Menlo, Consolas, monospace;
+  white-space: pre-line;
+}
+.coil-error {
+  color: #b91c1c;
+  font-weight: 600;
+}
 </style>
 
 <div class="helmholtz-card">
@@ -263,6 +318,26 @@
 <div class="helmholtz-result" id="hh-output">等待输入…</div>
 </div>
 <script src="/js/helmholtz.js"></script>
+
+<div class="coil-card">
+<h2>N 匝单线圈磁场计算</h2>
+<p>坐标以线圈中心为 <code>(0,0,0)</code>，轴向为 <code>x</code>（线圈平面为 <code>yz</code>）。单位与亥姆霍兹计算器一致：<strong>cm</strong>/<strong>A</strong>/<strong>Ω</strong>，输出磁场 <strong>T</strong> 与磁场梯度 <strong>T/m</strong>（对 <code>|B|</code> 关于 x/y/z 的偏导）。</p>
+<div class="coil-grid">
+  <div><label for="sc-x">x (cm)</label><input id="sc-x" type="number" step="any" value="0"></div>
+  <div><label for="sc-y">y (cm)</label><input id="sc-y" type="number" step="any" value="0"></div>
+  <div><label for="sc-z">z (cm)</label><input id="sc-z" type="number" step="any" value="0"></div>
+  <div><label for="sc-R">R 半径 (cm)</label><input id="sc-R" type="number" step="any" value="10"></div>
+  <div><label for="sc-I">电流 I (A)</label><input id="sc-I" type="number" step="any" value="1.0"></div>
+  <div><label for="sc-omega">电阻 Ω</label><input id="sc-omega" type="number" step="any" value="10"></div>
+  <div><label for="sc-N">匝数 N</label><input id="sc-N" type="number" step="1" value="100"></div>
+</div>
+<div class="coil-actions">
+  <button class="coil-btn" id="sc-run">计算磁场</button>
+  <div id="sc-error" class="coil-error"></div>
+</div>
+<div class="coil-result" id="sc-output">等待输入…</div>
+</div>
+<script src="/js/single_coil.js"></script>
 
 
       </div>
